@@ -625,13 +625,16 @@ button, input {
    Live Radar Bar (Ticker)
    ========================================================================== */
 .ticker-container {
-  background: #E9EDF0;
-  border-top: 1px solid rgba(36, 52, 71, 0.08);
-  border-bottom: 1px solid rgba(36, 52, 71, 0.08);
+  background: rgba(10, 20, 38, 0.92);
+  border-top: 1px solid rgba(255, 179, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 179, 0, 0.15);
   padding: 0.85rem 0;
   display: flex;
   align-items: center;
   overflow: hidden;
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 10;
 }
 
 .ticker-label {
@@ -662,11 +665,13 @@ button, input {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: #e2e8f0;
+  font-weight: 500;
 }
 
 .ticker-item strong {
-  color: var(--gold-bright);
+  color: var(--gold-bright, #ffd54f);
+  font-weight: 700;
 }
 
 @keyframes ticker-slide {
@@ -2552,13 +2557,32 @@ body.theme-light .footer-bottom {
   color: #64748b !important;
 }
 
-body.theme-light .ticker-wrapper {
-  background: #f1f5f9 !important;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+/* Light Theme Ticker Contrast Overrides */
+[data-theme="light"] .ticker-container,
+body.theme-light .ticker-container {
+  background: #f8fafc !important;
+  border-top: 1px solid rgba(36, 52, 71, 0.12) !important;
+  border-bottom: 1px solid rgba(36, 52, 71, 0.12) !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05) !important;
 }
 
-body.theme-light .ticker-text {
+[data-theme="light"] .ticker-item,
+body.theme-light .ticker-item {
   color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .ticker-item strong,
+body.theme-light .ticker-item strong {
+  color: #2563a6 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .ticker-label,
+body.theme-light .ticker-label {
+  background: linear-gradient(135deg, #2563a6 0%, #3b82c4 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 166, 0.28) !important;
 }
 
 /* Theme Toggle Button Style */
