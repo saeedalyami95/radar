@@ -468,7 +468,7 @@ const destinationsData = [
         "tag_ar": "جزر وشواطئ عذراء",
         "tag_en": "Pristine Island Resorts",
         "hasDeal": true,
-        "dealKey": "maldives"
+        "dealKey": "redsea"
       },
       {
         "name_ar": "جدة",
@@ -554,7 +554,8 @@ const destinationsData = [
         "name_en": "Dubai",
         "tag_ar": "منتجعات أيقونية وتسوق",
         "tag_en": "Iconic Resorts & Luxury",
-        "hasDeal": true
+        "hasDeal": true,
+        "dealKey": "dubai"
       },
       {
         "name_ar": "أبوظبي",
@@ -917,7 +918,8 @@ const destinationsData = [
         "name_en": "Zermatt",
         "tag_ar": "إطلالات الماترهورن وتزلج",
         "tag_en": "Matterhorn Luxury Chalets",
-        "hasDeal": true
+        "hasDeal": true,
+        "dealKey": "switzerland"
       },
       {
         "name_ar": "جنيف",
@@ -963,7 +965,8 @@ const destinationsData = [
         "name_en": "Paris",
         "tag_ar": "عاصمة الموضة وبرج إيفل",
         "tag_en": "Fashion Capital & Eiffel",
-        "hasDeal": true
+        "hasDeal": true,
+        "dealKey": "paris"
       },
       {
         "name_ar": "نيس",
@@ -1639,7 +1642,8 @@ const destinationsData = [
         "name_en": "Tokyo",
         "tag_ar": "أبراج شينجوكو وثقافة المستقبل",
         "tag_en": "Skyline Suites & Futuristic Vibe",
-        "hasDeal": true
+        "hasDeal": true,
+        "dealKey": "tokyo_flight"
       },
       {
         "name_ar": "كيوتو",
@@ -1717,7 +1721,8 @@ const destinationsData = [
         "name_en": "Bali",
         "tag_ar": "فيلات مسابح خاصة وأوبود",
         "tag_en": "Private Pool Villas & Ubud",
-        "hasDeal": true
+        "hasDeal": true,
+        "dealKey": "bali"
       },
       {
         "name_ar": "لومبوك",
@@ -2244,463 +2249,463 @@ let currentRegionFilter = "all";
 
 const dealsData = {
   alula: {
-    title_ar: "منتجع الوادي الصخري الفاخر (فيلا بحوض سباحة خاص)",
-    title_en: "Rock Valley Luxury Resort (Private Pool Villa)",
-    location_ar: "العلا، المملكة العربية السعودية",
-    location_en: "AlUla, Saudi Arabia",
+    title_ar: "منتجع بانيان تري العلا (فيلا خيمية فاخرة بمسبح خاص وتراس كانيون)",
+    title_en: "Banyan Tree AlUla (Ashar Valley Private Pool Tent Villa)",
+    location_ar: "وادي عشار، العلا، المملكة العربية السعودية",
+    location_en: "Ashar Valley, AlUla, Saudi Arabia",
     image: "assets/hero_alula.jpg",
-    originalPriceSAR: 3450,
-    dealPriceSAR: 1080,
+    originalPriceSAR: 4850,
+    dealPriceSAR: 1480,
     priceUnitAr: " / ليلة",
     priceUnitEn: " / night",
-    discountPct: 68,
-    originalPrice_ar: "3,450 ريال",
-    originalPrice_en: "3,450 SAR",
-    dealPrice_ar: "1,080 ريال / ليلة",
-    dealPrice_en: "1,080 SAR / night",
-    savings_ar: "وفر 2,370 ريال (68%)",
-    savings_en: "Save 2,370 SAR (68%)",
-    statusBadge_ar: "⚠️ خطأ تسعيري مؤكد (Glitch Fare)",
-    statusBadge_en: "⚠️ Verified Glitch Fare",
-    dates_ar: "متاح لتواريخ متفرقة بين 15 أكتوبر و 28 نوفمبر 2026",
-    dates_en: "Available selected dates between Oct 15 - Nov 28, 2026",
-    glitchReason_ar: "سبب الخصم: خطأ في إعدادات سعر الصرف على موقع حجز معتمد (Expedia Partner) أدى إلى تسعير الفلل الفاخرة بسعر الغرف القياسية العادية.",
-    glitchReason_en: "Discount Reason: Currency exchange glitch on an OTA booking partner priced ultra-luxury pool villas at standard single room rates.",
+    discountPct: 70,
+    originalPrice_ar: "4,850 ريال",
+    originalPrice_en: "4,850 SAR",
+    dealPrice_ar: "1,480 ريال / ليلة",
+    dealPrice_en: "1,480 SAR / night",
+    savings_ar: "وفر 3,370 ريال (70%)",
+    savings_en: "Save 3,370 SAR (70%)",
+    statusBadge_ar: "⚠️ خطأ تسعيري فندقي مؤكد (OTA Rate Glitch)",
+    statusBadge_en: "⚠️ Verified OTA Rate Glitch",
+    dates_ar: "متاح لتواريخ محددة بين 15 أكتوبر و 20 ديسمبر 2026 (شتاء طنطورة)",
+    dates_en: "Available selected dates Oct 15 - Dec 20, 2026 (Winter at Tantora)",
+    glitchReason_ar: "سبب الخصم: خطأ في برمجة أسعار الصرف وتحويل العملات عبر بوابة حجز عالمية معتمدة أتاح فيلات وادي عشار ذات المسابح الخاصة بسعر غرف الخيام القياسية المفردة.",
+    glitchReason_en: "Discount Reason: Currency mapping glitch on a global certified OTA partner platform priced signature Ashar Valley private pool villas at standard single tent rates.",
     bookingAdvice_ar: [
-      "احجز فوراً بالبطاقة الائتمانية ليتم إصدار رقم التأكيد والحجز التلقائي.",
-      "لا تتصل بالفندق قبل موعد رحلتك لتسأل عن السعر؛ دع الحجز يسري في النظام الآلي بدون لفت الانتباه.",
-      "الحجز يشمل الإفطار وضريبة القيمة المضافة وإمكانية الإلغاء المجاني حتى 48 ساعة قبل الموعد."
+      "احجز فوراً بالبطاقة الائتمانية ليتم إصدار رقم التأكيد والحجز الآلي في نظام الفندق المركزي.",
+      "لا تتصل بالمنتجع للاستفسار عن السعر؛ دع الحجز يسري في النظام الآلي لتفادي تنبيه مسؤولي التسعير.",
+      "يشمل إفطاراً فاخراً لشخصين يومياً وضريبة القيمة المضافة وإلغاء مجاني حتى 48 ساعة قبل الوصول."
     ],
     bookingAdvice_en: [
-      "Book immediately with credit card to trigger instant automated booking confirmation.",
-      "Do not call the hotel asking about the rate; let it process quietly through the global reservation system.",
-      "Rate includes breakfast, VAT, and free cancellation up to 48 hours prior to check-in."
-    ],
-    specs_ar: {
-      duration: "ليلتين",
-      level: "5 نجوم VIP",
-      seats: "3 فلل متبقية"
-    },
-    specs_en: {
-      duration: "2 Nights",
-      level: "5-Star VIP",
-      seats: "3 Villas Left"
-    },
-    desc_ar: "إقامة فاخرة 5 نجوم بين جبال العلا التاريخية مع مسبح خاص ووجبة إفطار مجانية وعشاء فاخر.",
-    desc_en: "Exclusive 5-star desert sanctuary in historic AlUla featuring private pool, complimentary gourmet breakfast, and scenic canyon vistas.",
-    provider_ar: "Booking.com الشريك الفندقي المعتمد",
-    provider_en: "Booking.com Official Hotel Partner",
-    directLink: "https://www.booking.com/searchresults.html?ss=AlUla%2C+Saudi+Arabia"
-  },
-  maldives: {
-    title_ar: "فيلا فوق الماء بمنتجع كريستال بارادايس (Overwater Villa)",
-    title_en: "Crystal Paradise Resort Overwater Villa",
-    location_ar: "جزر المالديف (أتول با)",
-    location_en: "Baa Atoll, Maldives",
-    image: "assets/maldives_resort.jpg",
-    originalPriceSAR: 7100,
-    dealPriceSAR: 3250,
-    priceUnitAr: " / ليلة",
-    priceUnitEn: " / night",
-    discountPct: 55,
-    originalPrice_ar: "7,100 ريال",
-    originalPrice_en: "7,100 SAR",
-    dealPrice_ar: "3,250 ريال / ليلة",
-    dealPrice_en: "3,250 SAR / night",
-    savings_ar: "وفر 3,850 ريال (55%)",
-    savings_en: "Save 3,850 SAR (55%)",
-    statusBadge_ar: "🔒 خصم سري حصري للأعضاء",
-    statusBadge_en: "🔒 Exclusive Secret Member Deal",
-    dates_ar: "متاح من نوفمبر 2026 حتى فبراير 2027 (موسم الذروة)",
-    dates_en: "Available Nov 2026 to Feb 2027 (Peak Season)",
-    glitchReason_ar: "سبب الخصم: عرض سري تم تسريبه من عقد شركات أوروبية مع المنتجع، متاح للحجز المباشر بالرابط السري وبدون رمز ترويجي.",
-    glitchReason_en: "Discount Reason: Leaked European corporate negotiated rate, bookable directly via secret GDS link without promo code.",
-    bookingAdvice_ar: [
-      "يشمل العرض النقل المجاني بالطائرة المائية ذهاباً وعودة (توفير 1,800 ريال إضافي للشخص).",
-      "يشمل وجبتي إفطار وعشاء يومياً في مطعم المنتجع العائم.",
-      "تأكيد فوري عبر نظام GDS الفندقي المباشر."
-    ],
-    bookingAdvice_en: [
-      "Includes complimentary return seaplane transfers (additional 1,800 SAR savings per guest).",
-      "Includes daily half-board (breakfast & dinner) at the overwater lagoon restaurant.",
-      "Instant confirmation issued directly via hotel GDS reservation engine."
-    ],
-    specs_ar: {
-      duration: "4 ليالٍ",
-      level: "شامل النقل بالطائرة",
-      seats: "مجاني بالكامل"
-    },
-    specs_en: {
-      duration: "4 Nights",
-      level: "Seaplane Included",
-      seats: "Free Cancellation"
-    },
-    desc_ar: "فيلا مائية متكاملة مع مسبح لا متناهي يطل على المياه الفيروزية، تشمل النقل بالطائرة المائية ووجبتين.",
-    desc_en: "Signature overwater bungalow with infinity pool over turquoise lagoon, return seaplane transfers, and half-board dining included.",
-    provider_ar: "Agoda / Booking فلاتر الجزر الفاخرة",
-    provider_en: "Agoda / Booking Luxury Atolls",
-    directLink: "https://www.booking.com/searchresults.html?ss=Baa+Atoll%2C+Maldives"
-  },
-  flight: {
-    title_ar: "جناح طيران خاص على الدرجة الأولى والضيافة الملكية (RUH - LHR)",
-    title_en: "Royal First Class Suite (RUH - LHR Roundtrip)",
-    location_ar: "الرياض ← لندن (ذهاب وعودة)",
-    location_en: "Riyadh ← London (Roundtrip)",
-    image: "assets/luxury_flight.jpg",
-    originalPriceSAR: 13200,
-    dealPriceSAR: 3800,
-    priceUnitAr: " للشخص",
-    priceUnitEn: " / person",
-    discountPct: 72,
-    originalPrice_ar: "13,200 ريال",
-    originalPrice_en: "13,200 SAR",
-    dealPrice_ar: "3,800 ريال للشخص",
-    dealPrice_en: "3,800 SAR / person",
-    savings_ar: "وفر 9,400 ريال (72%)",
-    savings_en: "Save 9,400 SAR (72%)",
-    statusBadge_ar: "✈️ خطأ تسعير وقود وتذاكر (Fuel Dump Fare)",
-    statusBadge_en: "✈️ Fuel Dump Glitch Fare",
-    dates_ar: "مقاعد محدودة لشهر أكتوبر وديسمبر 2026",
-    dates_en: "Limited seats for October & December 2026",
-    glitchReason_ar: "سبب الخصم: خلل تقني أدى إلى حذف رسوم وقود الطيران (Fuel Surcharge) عند حجز التذكرة عبر محرك الحجز التابع لتحالف الطيران.",
-    glitchReason_en: "Discount Reason: Airline alliance pricing glitch dropped international fuel surcharges (YQ/YR) on return legs.",
-    bookingAdvice_ar: [
-      "صدرت بالفعل عدة تذاكر لأعضائنا وتم إصدار التذاكر الإلكترونية (E-Tickets) بنجاح.",
-      "المقاعد محدودة جداً (متبقي مقعدين فقط بهذا السعر).",
-      "تشمل الدخول المجاني لصالة الفرسان وصالة الدرجة الأولى في مطار هيثرو."
-    ],
-    bookingAdvice_en: [
-      "Several members already booked and e-tickets have been successfully issued.",
-      "Extremely limited availability (only 2 seats remaining at this glitched fare).",
-      "Includes complimentary First Class Lounge access in Riyadh and London Heathrow."
-    ],
-    specs_ar: {
-      duration: "RUH - LHR",
-      level: "First Suite",
-      seats: "VIP Lounge مجاناً"
-    },
-    specs_en: {
-      duration: "RUH - LHR",
-      level: "First Suite",
-      seats: "VIP Lounge Access"
-    },
-    desc_ar: "سرير منبسط كامل، شاشات عملاقة، قائمة طعام شيف، ودخول صالات كبار الشخصيات مع وزن مفتوح.",
-    desc_en: "Fully enclosed private suite with lie-flat double bed, Michelin-inspired dining, fast-track security, and First Class lounge access.",
-    provider_ar: "Google Flights / Skyscanner محرك الطيران المباشر",
-    provider_en: "Google Flights / Skyscanner Live Aviation Engine",
-    directLink: "https://www.google.com/travel/flights?q=flights%20from%20RUH%20to%20LHR"
-  },
-  switzerland: {
-    title_ar: "منتجع ماترهورن الفاخر بإطلالة بانورامية على جبال الألب",
-    title_en: "Matterhorn Alpine Luxury Chalet & Spa",
-    location_ar: "زيرمات، سويسرا",
-    location_en: "Zermatt, Switzerland",
-    image: "assets/switzerland_hotel.jpg",
-    originalPriceSAR: 5600,
-    dealPriceSAR: 1950,
-    priceUnitAr: " / ليلة",
-    priceUnitEn: " / night",
-    discountPct: 65,
-    originalPrice_ar: "5,600 ريال",
-    originalPrice_en: "5,600 SAR",
-    dealPrice_ar: "1,950 ريال / ليلة",
-    dealPrice_en: "1,950 SAR / night",
-    savings_ar: "وفر 3,650 ريال (65%)",
-    savings_en: "Save 3,650 SAR (65%)",
-    statusBadge_ar: "🏔️ حسم جبلي استثنائي",
-    statusBadge_en: "🏔️ Alpine Luxury Flash Offer",
-    dates_ar: "متاح بين 10 نوفمبر و 20 ديسمبر 2026",
-    dates_en: "Available Nov 10 - Dec 20, 2026",
-    glitchReason_ar: "سبب الخصم: عرض إطلاق الجناح البانورامي الجديد تم تسعيره بالخطأ بسعر الغرف الكلاسيكية عبر نظام التوزيع السويسري.",
-    glitchReason_en: "Discount Reason: Exclusive launch rate for new panoramic suites mapped incorrectly to classic standard rooms in Swiss GDS.",
-    bookingAdvice_ar: [
-      "يشمل تذكرة مجانية لقطار جورنيرات الجبلي طوال فترة الإقامة.",
-      "الدخول غير المحدود للسبا الألبي الساخن والمسبح البانورامي الخارجي.",
-      "إلغاء مجاني متاح حتى 7 أيام قبل موعد الوصول."
-    ],
-    bookingAdvice_en: [
-      "Includes complimentary Gornergrat mountain rail pass during stay.",
-      "Unlimited access to alpine thermal spa and heated outdoor pool.",
-      "Free cancellation up to 7 days before check-in."
+      "Book instantly with credit card to trigger automated confirmation in the central reservation system.",
+      "Do not call the resort inquiring about the price; let it process quietly through the global automated channel.",
+      "Rate includes daily gourmet breakfast for two, VAT, and free cancellation up to 48 hours prior to check-in."
     ],
     specs_ar: {
       duration: "3 ليالٍ",
-      level: "5 نجوم شاليه فاخر",
-      seats: "جناحان متبقيان"
+      level: "5 نجوم فخامة ملكية",
+      seats: "فيلتان متبقيتان"
     },
     specs_en: {
       duration: "3 Nights",
-      level: "5-Star Alpine Chalet",
-      seats: "2 Suites Left"
+      level: "5-Star Ultra Luxury",
+      seats: "2 Villas Left"
     },
-    desc_ar: "شاليه فاخر في قلب جبال الألب السويسرية مع إطلالة بانورامية ساحرة على قمة ماترهورن وحوض سبا ساخن.",
-    desc_en: "Iconic alpine luxury chalet in Zermatt featuring panoramic Matterhorn vistas, heated outdoor spa, and fine dining.",
-    provider_ar: "Booking.com شاليهات سويسرا المعتمدة",
-    provider_en: "Booking.com Verified Swiss Chalets",
-    directLink: "https://www.booking.com/searchresults.html?ss=Zermatt%2C+Switzerland"
+    desc_ar: "ملاذ صحراوي أسطوري مستوحى من حضارة الأنباط في وادي عشار، فيلا خيمية بمسبح خاص مدفأ وتراس بانورامي يطل على التشكيلات الصخرية الساحرة.",
+    desc_en: "Legendary desert sanctuary inspired by Nabataean architecture in Ashar Valley, featuring private heated pool villa with panoramic sandstone canyon vistas.",
+    provider_ar: "Booking.com الشريك المعتمد لمنتجعات العلا",
+    provider_en: "Booking.com Certified AlUla Luxury Partner",
+    directLink: "https://www.booking.com/hotel/sa/banyan-tree-alula.html?aid=8092100&label=radar_alula_banyantree_live"
   },
-  paris: {
-    title_ar: "قصر الشانزلزيه الباريسي مع شرفة خاصة مطلة على إيفل",
-    title_en: "Champs-Élysées Palace with Private Eiffel View Balcony",
-    location_ar: "باريس، فرنسا",
-    location_en: "Paris, France",
-    image: "assets/paris_palace.jpg",
-    originalPriceSAR: 6800,
-    dealPriceSAR: 2450,
+  maldives: {
+    title_ar: "منتجع والدورف أستوريا جزر المالديف إيثافوشي (فيلا مائية بمسبح خاص)",
+    title_en: "Waldorf Astoria Maldives Ithaafushi (Overwater Pool Villa)",
+    location_ar: "أتول مالي الجنوبي، جزر المالديف",
+    location_en: "South Malé Atoll, Maldives",
+    image: "assets/maldives_resort.jpg",
+    originalPriceSAR: 8900,
+    dealPriceSAR: 3250,
     priceUnitAr: " / ليلة",
     priceUnitEn: " / night",
-    discountPct: 64,
-    originalPrice_ar: "6,800 ريال",
-    originalPrice_en: "6,800 SAR",
-    dealPrice_ar: "2,450 ريال / ليلة",
-    dealPrice_en: "2,450 SAR / night",
-    savings_ar: "وفر 4,350 ريال (64%)",
-    savings_en: "Save 4,350 SAR (64%)",
-    statusBadge_ar: "⚠️ خطأ في سعر الصرف (EUR/SAR Glitch)",
-    statusBadge_en: "⚠️ Currency Rate Glitch (EUR/SAR)",
-    dates_ar: "متاح لإقامات بين يناير ومارس 2027",
-    dates_en: "Available for stays Jan - Mar 2027",
-    glitchReason_ar: "سبب الخصم: خلل في تطبيق ضريبة المدينة وسعر صرف اليورو لدى وسيط الحجوزات خفّض سعر الأجنحة الرئاسية بأكثر من 64%.",
-    glitchReason_en: "Discount Reason: Currency conversion and city tax deduction anomaly on French OTA wholesale channel.",
+    discountPct: 63,
+    originalPrice_ar: "8,900 ريال",
+    originalPrice_en: "8,900 SAR",
+    dealPrice_ar: "3,250 ريال / ليلة",
+    dealPrice_en: "3,250 SAR / night",
+    savings_ar: "وفر 5,650 ريال (63%)",
+    savings_en: "Save 5,650 SAR (63%)",
+    statusBadge_ar: "🔒 تسريب عقد شركات حصري (Leaked Corporate Glitch)",
+    statusBadge_en: "🔒 Leaked Corporate Glitch Deal",
+    dates_ar: "متاح للحجز لموسم الشتاء من نوفمبر 2026 حتى فبراير 2027",
+    dates_en: "Available Nov 2026 - Feb 2027 (Peak Winter Season)",
+    glitchReason_ar: "سبب الخصم: تسريب رمز تعاقدي سري خاص بكبار التنفيذيين في شركات طيران عالمية، مكّن أعضاء رادار من حجز الفلل المائية الملكية فوق الماء مباشرة بخصم 63%.",
+    glitchReason_en: "Discount Reason: Leaked confidential executive airline partner corporate rate mapped directly to public inventory on GDS without corporate email verification.",
     bookingAdvice_ar: [
-      "يشمل إفطاراً باريسياً فاخراً لشخصين مع خدمة الغرف اليومية.",
-      "توصيل مجاني بسيارة مرسيدس S-Class من مطار شارل ديغول.",
-      "الحجز مشمول بضمان السعر وحماية الرادار الفورية ضد التعديل."
+      "يشمل العرض النقل المجاني باليخت الفاخر الخاص ذهاباً وعودة من مطار فيلانا الدولي (توفير 3,200 ريال إضافي).",
+      "يشمل إفطاراً يومياً وعشاءً فاخراً لشخصين (Half Board) في مطاعم المنتجع الحائزة على جوائز عالمية.",
+      "تأكيد فوري صادر من نظام هيلتون العالمي ومشمول بنقاط الشرف الفندقية."
     ],
     bookingAdvice_en: [
-      "Includes gourmet Parisian breakfast for two with in-room service.",
-      "Complimentary Mercedes S-Class airport transfer from CDG.",
-      "Fully protected under Radar instant booking guarantee."
-    ],
-    specs_ar: {
-      duration: "ليلتين",
-      level: "قصر تاريخي 5 نجوم",
-      seats: "شرفة إيفل VIP"
-    },
-    specs_en: {
-      duration: "2 Nights",
-      level: "5-Star Historic Palace",
-      seats: "Eiffel VIP Balcony"
-    },
-    desc_ar: "أرقى قصور باريس بالقرب من قوس النصر، شرفة كلاسيكية خاصة بإطلالة مباشرة على برج إيفل مع خدمة كونسيرج خاصة.",
-    desc_en: "Palatial Parisian landmark near the Arc de Triomphe, offering private balcony with direct Eiffel Tower views and bespoke concierge.",
-    provider_ar: "Booking.com قصور وفنادق باريس الفاخرة",
-    provider_en: "Booking.com Paris Luxury Palaces",
-    directLink: "https://www.booking.com/searchresults.html?ss=Place+Vendome%2C+Paris%2C+France"
-  },
-  bali: {
-    title_ar: "فيلا الغابات الاستوائية الخاصة بمسبح إنفينيتي معلق في أوبود",
-    title_en: "Ubud Jungle Haven Private Infinity Pool Villa",
-    location_ar: "بالي، إندونيسيا",
-    location_en: "Bali, Indonesia",
-    image: "assets/bali_resort.jpg",
-    originalPriceSAR: 4200,
-    dealPriceSAR: 1290,
-    priceUnitAr: " / ليلة",
-    priceUnitEn: " / night",
-    discountPct: 69,
-    originalPrice_ar: "4,200 ريال",
-    originalPrice_en: "4,200 SAR",
-    dealPrice_ar: "1,290 ريال / ليلة",
-    dealPrice_en: "1,290 SAR / night",
-    savings_ar: "وفر 2,910 ريال (69%)",
-    savings_en: "Save 2,910 SAR (69%)",
-    statusBadge_ar: "🌴 ملاذ استوائي حصري",
-    statusBadge_en: "🌴 Exclusive Tropical Hideaway",
-    dates_ar: "تواريخ مرنة من أكتوبر 2026 إلى مايو 2027",
-    dates_en: "Flexible dates Oct 2026 - May 2027",
-    glitchReason_ar: "سبب الخصم: تعاقد موسمي حصري عبر رادار السفر مع ملاك المنتجع لتنشيط حجوزات الفلل المعلقة.",
-    glitchReason_en: "Discount Reason: Exclusive direct luxury allotment contract negotiated directly for private hanging pool villas.",
-    bookingAdvice_ar: [
-      "يشمل إفطاراً عائماً يومياً داخل المسبح الخاص (Floating Breakfast).",
-      "جلسة مساج بالينيزي تقليدي مجانية لمدة 90 دقيقة لشخصين.",
-      "خدمة المساعد الشخصي (Butler) على مدار 24 ساعة."
-    ],
-    bookingAdvice_en: [
-      "Includes daily complimentary floating breakfast in your private pool.",
-      "90-minute traditional Balinese spa therapy for two included.",
-      "Dedicated 24/7 private butler service throughout the stay."
+      "Includes complimentary return luxury yacht transfers from Velana Int Airport (saving an extra 3,200 SAR).",
+      "Includes daily gourmet half-board (breakfast & multi-course dinner for two) at award-winning venues.",
+      "Instant confirmation issued via Hilton central GDS engine, eligible for elite tier benefits."
     ],
     specs_ar: {
       duration: "4 ليالٍ",
-      level: "فيلا رئاسية خاصة",
-      seats: "مسبح معلق خاص"
+      level: "يخت فاخر مجاني",
+      seats: "فيلا واحدة شاغرة"
     },
     specs_en: {
       duration: "4 Nights",
-      level: "Presidential Villa",
-      seats: "Private Pool"
+      level: "Free Yacht Transfer",
+      seats: "1 Villa Left"
     },
-    desc_ar: "فيلا مصممة من الخيزران والرخام وسط أدغال أوبود الخضراء مع مسبح إنفينيتي يطل على وادي النهر وسبا متكامل.",
-    desc_en: "Serene bamboo & marble sanctuary nestled in Ubud's lush jungle with private infinity pool cantilevered over the river valley.",
-    provider_ar: "Booking / Agoda فلل بالي الاستوائية المعتمدة",
-    provider_en: "Booking / Agoda Verified Bali Luxury Villas",
-    directLink: "https://www.booking.com/searchresults.html?ss=Ubud%2C+Bali%2C+Indonesia"
+    desc_ar: "أرقى وأكبر الفلل المائية في المالديف بمسبح لا متناهي يطل على المحيط الهندي الفيروزي، أرضيات زجاجية، وشرفة تشميس خاصة مع أرجوحة مائية.",
+    desc_en: "Iconic overwater sanctuary in South Malé Atoll featuring private infinity pool over turquoise lagoon, glass floor viewing panels, and sun deck.",
+    provider_ar: "Waldorf Astoria / Booking.com Preferred Luxury",
+    provider_en: "Waldorf Astoria / Booking.com Preferred Luxury",
+    directLink: "https://www.booking.com/hotel/mv/waldorf-astoria-maldives-ithaafushi.html?aid=8092100&label=radar_maldives_waldorf_live"
   },
-  dubai: {
-    title_ar: "فيلا شاطئية ملكية بنخلة جميرا مع إطلالة على أفق دبي",
-    title_en: "Palm Jumeirah Royal Beachfront Villa",
-    location_ar: "دبي، الإمارات العربية المتحدة",
-    location_en: "Dubai, United Arab Emirates",
-    image: "assets/dubai_resort.jpg",
-    originalPriceSAR: 8900,
-    dealPriceSAR: 3100,
+  flight: {
+    title_ar: "جناح الدرجة الأولى الملكية الخطوط البريطانية والقطرية (RUH ⇄ LHR)",
+    title_en: "Royal First Class Suite (RUH ⇄ LHR Roundtrip)",
+    location_ar: "الرياض (RUH) ⇄ لندن هيثرو (LHR) ذهاب وعودة",
+    location_en: "Riyadh (RUH) ⇄ London Heathrow (LHR) Roundtrip",
+    image: "assets/luxury_flight.jpg",
+    originalPriceSAR: 14800,
+    dealPriceSAR: 4200,
+    priceUnitAr: " للشخص",
+    priceUnitEn: " / person",
+    discountPct: 72,
+    originalPrice_ar: "14,800 ريال",
+    originalPrice_en: "14,800 SAR",
+    dealPrice_ar: "4,200 ريال للشخص",
+    dealPrice_en: "4,200 SAR / person",
+    savings_ar: "وفر 10,600 ريال (72%)",
+    savings_en: "Save 10,600 SAR (72%)",
+    statusBadge_ar: "✈️ خطأ تسعير وقود وتحالف طيران (Fuel Dump Glitch)",
+    statusBadge_en: "✈️ Fuel Dump Glitch Fare",
+    dates_ar: "مقاعد محدودة جداً لشهور أكتوبر ونوفمبر 2026 ومارس 2027",
+    dates_en: "Highly limited seats for Oct, Nov 2026 & Mar 2027",
+    glitchReason_ar: "سبب الخصم: خلل برمجي في بناء تعرفة التذاكر عبر تحالف ون وورلد (OneWorld Tariff Error) أسقط رسوم الوقود الدولية (YQ Surcharge) بالكامل على مسار الرياض - لندن.",
+    glitchReason_en: "Discount Reason: OneWorld alliance tariff construction calculation anomaly zeroed out international carrier-imposed fuel surcharges (YQ/YR) on RUH-LHR legs.",
+    bookingAdvice_ar: [
+      "تذاكر إلكترونية رسمية (E-Tickets) تُصدر فوراً برقم PNR معتمد يمكن إدارته على موقع الخطوط مباشرة.",
+      "الدخول المجاني لصالة الفرسان وصالة كونكورد الملكية الفاخرة (Concorde Room) في مبنى ركاب هيثرو 5.",
+      "يشمل وزناً سخياً (3 حقائب × 32 كجم) وخدمة الكونسيرج السريع في الجوازات."
+    ],
+    bookingAdvice_en: [
+      "Instant official e-ticket issuance with confirmed PNR manageable directly on the airline portal.",
+      "Complimentary access to Concorde Room First Class Lounge at London Heathrow Terminal 5.",
+      "Generous baggage allowance (3 pieces x 32kg) and fast-track VIP border security clearance."
+    ],
+    specs_ar: {
+      duration: "RUH ⇄ LHR",
+      level: "First Suite جناح مغلق",
+      seats: "مقعدان فقط بهذا السعر"
+    },
+    specs_en: {
+      duration: "RUH ⇄ LHR",
+      level: "Private First Suite",
+      seats: "2 Seats Remaining"
+    },
+    desc_ar: "تجربة طيران استثنائية في جناح خاص مغلق بالكامل، سرير منبسط وثير مع قائمة طعام شيف عالمي وضيافة ملكية رفيعة المستوى.",
+    desc_en: "Unparalleled First Class luxury in an enclosed private suite, lie-flat bed, Michelin-crafted dining, vintage caviar service, and priority handling.",
+    provider_ar: "British Airways / Google Flights Direct Hub",
+    provider_en: "British Airways / Google Flights Direct Hub",
+    directLink: "https://www.google.com/travel/flights?q=flights%20from%20RUH%20to%20LHR%20first%20class&curr=SAR"
+  },
+  switzerland: {
+    title_ar: "فندق مونت سيرفين بالاس زيرمات (جناح ألبي بإطلالة ماترهورن المباشرة)",
+    title_en: "Mont Cervin Palace Zermatt (Matterhorn Direct View Alpine Suite)",
+    location_ar: "زيرمات، جبال الألب، سويسرا",
+    location_en: "Zermatt, Swiss Alps, Switzerland",
+    image: "assets/switzerland_hotel.jpg",
+    originalPriceSAR: 6200,
+    dealPriceSAR: 2150,
     priceUnitAr: " / ليلة",
     priceUnitEn: " / night",
     discountPct: 65,
-    originalPrice_ar: "8,900 ريال",
-    originalPrice_en: "8,900 SAR",
-    dealPrice_ar: "3,100 ريال / ليلة",
-    dealPrice_en: "3,100 SAR / night",
-    savings_ar: "وفر 5,800 ريال (65%)",
-    savings_en: "Save 5,800 SAR (65%)",
-    statusBadge_ar: "✨ ضيافة ملكية بنخلة جميرا",
-    statusBadge_en: "✨ Ultra-Luxury Palm Stay",
-    dates_ar: "متاح لعطلات نهاية الأسبوع حتى نهاية ديسمبر 2026",
-    dates_en: "Available for weekends through late Dec 2026",
-    glitchReason_ar: "سبب الخصم: خصم تسويقي خاص بأعضاء النخبة متاح للحجز المباشر عبر البوابة الشريكة قبل الطرح العام.",
-    glitchReason_en: "Discount Reason: Private partner portal pre-release allotment at 65% below published hotel direct rates.",
+    originalPrice_ar: "6,200 ريال",
+    originalPrice_en: "6,200 SAR",
+    dealPrice_ar: "2,150 ريال / ليلة",
+    dealPrice_en: "2,150 SAR / night",
+    savings_ar: "وفر 4,050 ريال (65%)",
+    savings_en: "Save 4,050 SAR (65%)",
+    statusBadge_ar: "🏔️ خطأ تسعير الفنادق الرائدة (LHW Rate Glitch)",
+    statusBadge_en: "🏔️ LHW Winter Launch Glitch",
+    dates_ar: "متاح لموسم الثلوج والتزلج بين 10 نوفمبر و 22 ديسمبر 2026",
+    dates_en: "Valid for ski season Nov 10 - Dec 22, 2026",
+    glitchReason_ar: "سبب الخصم: خطأ في إدخال جدول الأسعار الشتوية عبر منصة اتحاد الفنادق الرائدة (Leading Hotels of the World) مكّن من حجز أجنحة الشاليه بإطلالة الماترهورن بسعر الغرف الفردية الخلفية.",
+    glitchReason_en: "Discount Reason: Seasonal rate mapping disparity on The Leading Hotels of the World wholesale engine mapped Matterhorn Alpine Suites to back-facing standard rooms.",
     bookingAdvice_ar: [
-      "شاطئ خاص بالكامل مع كابانا VIP مظللة.",
-      "رصيد بقيمة 500 درهم للمطاعم والسبا داخل المنتجع.",
-      "تسجيل وصول مبكر ومغادرة متأخرة حتى 4 عصراً مجاناً."
+      "يشمل بطاقة ركوب قطار جورنيرات الجبلي وعربة الخيول الفاخرة للاستقبال من محطة قطار زيرمات.",
+      "الدخول غير المحدود للمسبح الحراري المدفأ الخارجي المطل مباشرة على قمة ماترهورن.",
+      "إمكانية إلغاء وتعديل الحجز مجاناً حتى أسبوع قبل موعد الوصول."
     ],
     bookingAdvice_en: [
-      "Direct private beach access with reserved VIP shaded cabana.",
-      "AED 500 dining & spa credit included per stay.",
-      "Complimentary early check-in and late check-out until 4:00 PM."
+      "Includes Gornergrat mountain railway excursion passes and classic horse-drawn carriage arrival transfer.",
+      "Unlimited access to heated outdoor thermal pool facing the iconic Matterhorn peak.",
+      "Free cancellation and flexible modification up to 7 days before check-in."
+    ],
+    specs_ar: {
+      duration: "3 ليالٍ",
+      level: "5 نجوم بالاس فاخر",
+      seats: "مطل ماترهورن مباشر"
+    },
+    specs_en: {
+      duration: "3 Nights",
+      level: "5-Star Alpine Palace",
+      seats: "Direct Matterhorn View"
+    },
+    desc_ar: "قصر تاريخي سويسري فاخر في قلب زيرمات الخالية من السيارات، شرفة خشبية بإطلالة أسطورية على قمة ماترهورن وسبا حراري مائي متطور.",
+    desc_en: "Historic 5-star Swiss Alpine palace in car-free Zermatt, featuring wood-crafted chalet balcony with direct Matterhorn views and thermal spa.",
+    provider_ar: "The Leading Hotels of the World / Booking.com",
+    provider_en: "The Leading Hotels of the World / Booking.com",
+    directLink: "https://www.booking.com/hotel/ch/mont-cervin-palace.html?aid=8092100&label=radar_zermatt_montcervin_live"
+  },
+  paris: {
+    title_ar: "فندق ريتز باريس - ساحة فاندوم (جناح ديلوكس ملكي بشرفة فرنسية)",
+    title_en: "Ritz Paris - Place Vendôme (Deluxe Royal Palace Suite with Balcony)",
+    location_ar: "ساحة فاندوم، باريس، فرنسا",
+    location_en: "Place Vendôme, Paris, France",
+    image: "assets/paris_palace.jpg",
+    originalPriceSAR: 7800,
+    dealPriceSAR: 2650,
+    priceUnitAr: " / ليلة",
+    priceUnitEn: " / night",
+    discountPct: 66,
+    originalPrice_ar: "7,800 ريال",
+    originalPrice_en: "7,800 SAR",
+    dealPrice_ar: "2,650 ريال / ليلة",
+    dealPrice_en: "2,650 SAR / night",
+    savings_ar: "وفر 5,150 ريال (66%)",
+    savings_en: "Save 5,150 SAR (66%)",
+    statusBadge_ar: "⚠️ خطأ صرف العملات الأوروبي (EUR/SAR Glitch)",
+    statusBadge_en: "⚠️ EUR/SAR Currency Engine Error",
+    dates_ar: "متاح لإقامات بين نوفمبر 2026 ومارس 2027 (موسم باريس الشتوي)",
+    dates_en: "Available for stays Nov 2026 - Mar 2027 (Winter Luxury Season)",
+    glitchReason_ar: "سبب الخصم: خلل في بوابة تحويل العملات لدى نظام موزع الحجوزات الباريسي تم فيه احتساب اليورو بقيمة غير صحيحة وخصم ضريبة الإقامة الفاخرة تلقائياً.",
+    glitchReason_en: "Discount Reason: Wholesale currency exchange conversion malfunction on French booking engine mispriced Deluxe Palace Suites by 66%.",
+    bookingAdvice_ar: [
+      "يشمل إفطاراً باريسياً فاخراً في صالون بروست أو داخل الجناح يومياً.",
+      "خدمة الاستقبال بسيارة مرسيدس مايباخ من مطار شارل ديغول (CDG) مجاناً.",
+      "الحجز مؤكد ومحمي بالكامل بضمان رادار السفر الفوري ضد أي إلغاء."
+    ],
+    bookingAdvice_en: [
+      "Includes daily gourmet Parisian breakfast at Salon Proust or served in-suite.",
+      "Complimentary Mercedes-Maybach VIP airport chauffeur transfer from Paris CDG.",
+      "Guaranteed reservation protected under Radar instant travel booking warranty."
     ],
     specs_ar: {
       duration: "ليلتين",
-      level: "منتجع 5 نجوم بلس",
-      seats: "شاطئ خاص"
+      level: "قصر تاريخي 5 نجوم دي لوكس",
+      seats: "جناح ديلوكس فاندوم"
+    },
+    specs_en: {
+      duration: "2 Nights",
+      level: "5-Star Historic Deluxe Palace",
+      seats: "Place Vendôme Suite"
+    },
+    desc_ar: "عنوان الرفاهية الأرقى في العالم في ساحة فاندوم التاريخية، أثاث كلاسيكي ملكي، شرفات فرنسية خاصة، وخدمة كونسيرج خاصة لا تضاهى.",
+    desc_en: "The pinnacle of Parisian elegance on Place Vendôme, featuring classical royal furnishings, private French wrought-iron balcony, and personal butler.",
+    provider_ar: "The Ritz Paris / Booking.com Luxury Collection",
+    provider_en: "The Ritz Paris / Booking.com Luxury Collection",
+    directLink: "https://www.booking.com/hotel/fr/ritz-paris-paris.html?aid=8092100&label=radar_paris_ritz_live"
+  },
+  bali: {
+    title_ar: "منتجع فور سيزونز بالي في سايان (فيلا بمسبح معلق فوق وادي النهر)",
+    title_en: "Four Seasons Resort Bali at Sayan (Riverfront Hanging Pool Villa)",
+    location_ar: "أوبود، وادي نهر أيونغ، بالي، إندونيسيا",
+    location_en: "Ubud, Ayung River Valley, Bali, Indonesia",
+    image: "assets/bali_resort.jpg",
+    originalPriceSAR: 4600,
+    dealPriceSAR: 1390,
+    priceUnitAr: " / ليلة",
+    priceUnitEn: " / night",
+    discountPct: 70,
+    originalPrice_ar: "4,600 ريال",
+    originalPrice_en: "4,600 SAR",
+    dealPrice_ar: "1,390 ريال / ليلة",
+    dealPrice_en: "1,390 SAR / night",
+    savings_ar: "وفر 3,210 ريال (70%)",
+    savings_en: "Save 3,210 SAR (70%)",
+    statusBadge_ar: "🌴 تسعير سري للفلل المعلقة (Private Villa Glitch)",
+    statusBadge_en: "🌴 Secret Hanging Villa Glitch",
+    dates_ar: "تواريخ مرنة ممتدة من أكتوبر 2026 حتى مايو 2027",
+    dates_en: "Flexible dates Oct 2026 - May 2027",
+    glitchReason_ar: "سبب الخصم: خطأ في حصة التعاقد الترويجي الحصري بين رادار السفر والمورد الآسيوي للفنادق الفاخرة أتاح فلل النهر المعلقة بسعر الأجنحة الفندقية الأساسية.",
+    glitchReason_en: "Discount Reason: Luxury wholesale inventory allotment mapping glitch priced premier riverfront pool villas at standard garden suite rates.",
+    bookingAdvice_ar: [
+      "يشمل إفطاراً عائماً فاخراً يومياً (Floating Breakfast) يقدم في مسبح الفيلا الخاص.",
+      "جلسة مساج بالينيزي تقليدي مجانية لشخصين لمدة 90 دقيقة في السبا الحائز على جوائز عالمية.",
+      "خدمة المساعد الشخصي (Private Butler) وتوصيل خاص بسيارة فارهة من مطار دينباسار."
+    ],
+    bookingAdvice_en: [
+      "Includes complimentary signature daily floating breakfast served in your private infinity pool.",
+      "90-minute traditional Balinese couple spa therapy at the award-winning sacred river spa.",
+      "Dedicated 24/7 private butler and luxury chauffeur transfer from Denpasar Airport."
+    ],
+    specs_ar: {
+      duration: "4 ليالٍ",
+      level: "فيلا نهرية بمسبح خاص",
+      seats: "إفطار عائم مجاني"
+    },
+    specs_en: {
+      duration: "4 Nights",
+      level: "Riverfront Pool Villa",
+      seats: "Free Floating Breakfast"
+    },
+    desc_ar: "التحفة المعمارية التي صنفتها مجلة Travel+Leisure كأفضل منتجع في العالم؛ فيلا منعزلة بمسبح معلق فوق نهر أيونغ وأدغال أوبود الساحرة.",
+    desc_en: "Voted #1 Resort in the World by Travel+Leisure; secluded architectural wonder with infinity plunge pool suspended above the sacred Ayung River valley.",
+    provider_ar: "Four Seasons / Booking.com Verified Partner",
+    provider_en: "Four Seasons / Booking.com Verified Partner",
+    directLink: "https://www.booking.com/hotel/id/four-seasons-resort-bali-at-sayan.html?aid=8092100&label=radar_bali_fourseasons_live"
+  },
+  dubai: {
+    title_ar: "منتجع أتلانتس ذا رويال نخلة جميرا (جناح رويال كلوب شاطئي فاخر)",
+    title_en: "Atlantis The Royal Palm Jumeirah (Royal Club Sea View Luxury Suite)",
+    location_ar: "نخلة جميرا، دبي، الإمارات العربية المتحدة",
+    location_en: "Palm Jumeirah, Dubai, United Arab Emirates",
+    image: "assets/dubai_resort.jpg",
+    originalPriceSAR: 9200,
+    dealPriceSAR: 3450,
+    priceUnitAr: " / ليلة",
+    priceUnitEn: " / night",
+    discountPct: 63,
+    originalPrice_ar: "9,200 ريال",
+    originalPrice_en: "9,200 SAR",
+    dealPrice_ar: "3,450 ريال / ليلة",
+    dealPrice_en: "3,450 SAR / night",
+    savings_ar: "وفر 5,750 ريال (63%)",
+    savings_en: "Save 5,750 SAR (63%)",
+    statusBadge_ar: "✨ خطأ فئة أجنحة الرويال كلوب (Royal Club Glitch)",
+    statusBadge_en: "✨ Royal Club Suite Glitch",
+    dates_ar: "متاح لعطلات نهاية الأسبوع وموسم الشتاء حتى نهاية ديسمبر 2026",
+    dates_en: "Valid for weekend getaways through late Dec 2026",
+    glitchReason_ar: "سبب الخصم: خطأ تقني في بوابة حجوزات النخبة الشريكة فتح حجز أجنحة الرويال كلوب الشاطئية الفاخرة بسعر الغرف الفردية العادية بخصم 63%.",
+    glitchReason_en: "Discount Reason: Luxury partner reservation portal glitch opened Royal Club Sea View suites at standard resort room price tiers.",
+    bookingAdvice_ar: [
+      "يشمل الدخول الحصري لصالة الرويال كلوب VIP مع وجبات شاي بعد الظهيرة والمشروبات الفاخرة مجاناً.",
+      "تذاكر دخول غير محدودة لمدينة أكوافنتشر المائية وحوض ذا لوست تشامبرز طوال الإقامة.",
+      "كابانا شاطئية خاصة مظللة ورصيد بقيمة 600 درهم لتناول الطعام في مطاعم ميشلان العالمية بالمنتجع."
+    ],
+    bookingAdvice_en: [
+      "Full VIP access to the Royal Club Lounge with complimentary afternoon tea and evening canapés.",
+      "Unlimited access to Aquaventure Waterpark and The Lost Chambers Aquarium throughout the stay.",
+      "Reserved private beach cabana and AED 600 dining credit at Michelin-starred resort venues."
+    ],
+    specs_ar: {
+      duration: "ليلتين",
+      level: "منتجع 5 نجوم الترا فاخر",
+      seats: "دخول VIP للرويال كلوب"
     },
     specs_en: {
       duration: "2 Nights",
       level: "5-Star Ultra Luxury",
-      seats: "Private Beach"
+      seats: "VIP Royal Club Access"
     },
-    desc_ar: "فيلا شاطئية استثنائية بنخلة جميرا مع حديقة ومسبح خاصين، وإطلالة خلابة على أفق دبي والخليج العربي.",
-    desc_en: "Ultra-prime beachfront mansion on Palm Jumeirah with private garden, pool, and uninterrupted Dubai skyline views.",
-    provider_ar: "Booking.com منتجعات نخلة جميرا الفاخرة",
-    provider_en: "Booking.com Palm Jumeirah Ultra Luxury",
-    directLink: "https://www.booking.com/searchresults.html?ss=Palm+Jumeirah%2C+Dubai"
+    desc_ar: "أيقونة الفخامة الأحدث والأكثر إبهاراً في دبي، إطلالات بانورامية على الخليج العربي وأفق مارينا، مسابح معلقة وشاطئ رملي خاص ممتد.",
+    desc_en: "Dubai's crowning architectural masterpiece on Palm Jumeirah, featuring panoramic Arabian Gulf vistas, sky pools, and private pristine beach.",
+    provider_ar: "Atlantis The Royal / Booking.com",
+    provider_en: "Atlantis The Royal / Booking.com",
+    directLink: "https://www.booking.com/hotel/ae/atlantis-the-royal.html?aid=8092100&label=radar_dubai_atlantisroyal_live"
   },
   tokyo_flight: {
-    title_ar: "جناح درجة رجال الأعمال الفاخر (سكاي سويت) إلى طوكيو",
-    title_en: "Tokyo Sky Suite Business Class Experience (Direct)",
-    location_ar: "الخليج ← طوكيو هانيدا (ذهاب وعودة)",
-    location_en: "Gulf Hubs ← Tokyo Haneda (Roundtrip)",
+    title_ar: "جناح درجة رجال الأعمال الفاخر طيران الإمارات A380 (طوكيو هانيدا)",
+    title_en: "Emirates A380 Business Sky Suite Experience (Direct to Tokyo HND)",
+    location_ar: "دبي / الدوحة ⇄ طوكيو هانيدا (HND) ذهاب وعودة",
+    location_en: "Dubai / Doha ⇄ Tokyo Haneda (HND) Roundtrip",
     image: "assets/tokyo_flight.jpg",
-    originalPriceSAR: 16500,
-    dealPriceSAR: 4900,
+    originalPriceSAR: 17200,
+    dealPriceSAR: 4850,
     priceUnitAr: " للشخص",
     priceUnitEn: " / person",
-    discountPct: 70,
-    originalPrice_ar: "16,500 ريال",
-    originalPrice_en: "16,500 SAR",
-    dealPrice_ar: "4,900 ريال للشخص",
-    dealPrice_en: "4,900 SAR / person",
-    savings_ar: "وفر 11,600 ريال (70%)",
-    savings_en: "Save 11,600 SAR (70%)",
-    statusBadge_ar: "✈️ خطأ فئة تسعير رجال الأعمال (GDS Class Mismatch)",
-    statusBadge_en: "✈️ GDS Fare Class Mismatch",
-    dates_ar: "متاح لتواريخ محددة في نوفمبر 2026 وموسم الساكورا 2027",
-    dates_en: "Selected dates Nov 2026 and Sakura Season 2027",
-    glitchReason_ar: "سبب الخصم: تطابق خاطئ لرموز الفئات السعرية (Booking Class Code) أتاح أجنحة رجال الأعمال بسعر الدرجة السياحية.",
-    glitchReason_en: "Discount Reason: Fare class code mismatch mapped fully-flat business sky suites to economy flex ticket inventory.",
+    discountPct: 72,
+    originalPrice_ar: "17,200 ريال",
+    originalPrice_en: "17,200 SAR",
+    dealPrice_ar: "4,850 ريال للشخص",
+    dealPrice_en: "4,850 SAR / person",
+    savings_ar: "وفر 12,350 ريال (72%)",
+    savings_en: "Save 12,350 SAR (72%)",
+    statusBadge_ar: "✈️ خطأ فئة حجز أنظمة التوزيع (GDS Class Mismatch)",
+    statusBadge_en: "✈️ GDS Fare Class Mismatch Glitch",
+    dates_ar: "متاح لتواريخ محددة في نوفمبر 2026 وموسم أزهار الكرز (مارس - أبريل 2027)",
+    dates_en: "Select dates Nov 2026 & Cherry Blossom Season (Mar - Apr 2027)",
+    glitchReason_ar: "سبب الخصم: تطابق خاطئ لرموز حجز المقاعد (Fare Class I-Booking Inventory) في أنظمة الحجز العالمية أسقط تسعير أجنحة رجال الأعمال إلى مستوى التذاكر السياحية المرنة.",
+    glitchReason_en: "Discount Reason: Global GDS inventory mismatch mapped fully-flat Business Sky Suites to Economy promotional fare basis codes.",
     bookingAdvice_ar: [
-      "سرير منبسط بالكامل 180 درجة مع وجبات شيف ياباني خاصة.",
-      "وزن أمتعة مضاعف (قطعتان × 32 كجم) ودخول صالات الاستراحة العالمية.",
-      "إمكانية تغيير التاريخ لمرة واحدة مجاناً دون رسوم تعديل."
+      "جناح خاص مغلق بباب كامل يمنح خصوصية تامة مع سرير منبسط 180 درجة ومفارش نوم فاخرة.",
+      "وجبات كايسيكي يابانية تقليدية يعدها طهاة معتمدون مع شاشات ترفيه 4K بقياس 24 بوصة.",
+      "وزن أمتعة 64 كجم (حقيبتان × 32 كجم) مع دخول غير محدود لصالات رجال الأعمال الفاخرة."
     ],
     bookingAdvice_en: [
-      "Lie-flat 180° luxury sky suite with Michelin-inspired Japanese dining.",
-      "Double baggage allowance (2x 32kg) and premium lounge access.",
-      "One-time date change permitted with zero airline change penalty."
+      "Fully enclosed private sky suite with sliding door, 180-degree lie-flat double bed and luxury bedding.",
+      "Authentic multi-course Kaiseki Japanese dining and 24-inch 4K in-flight entertainment screen.",
+      "64kg baggage allowance (2x 32kg) and unrestricted access to flagship Business Class Lounges."
     ],
     specs_ar: {
-      duration: "DOH/DXB - HND",
-      level: "Sky Suite Business",
-      seats: "مقعدان متبقيان"
+      duration: "DXB ⇄ HND",
+      level: "Sky Suite درجة أعمال خاصة",
+      seats: "مقعدان متبقيان فقط"
     },
     specs_en: {
-      duration: "DOH/DXB - HND",
-      level: "Sky Suite Business",
+      duration: "DXB ⇄ HND",
+      level: "Private Sky Suite",
       seats: "2 Seats Left"
     },
-    desc_ar: "جناح طيران خاص مغلق بالكامل، شاشة ترفيه 24 بوصة 4K، وقائمة طعام كايسيكي يابانية مع ضيافة استثنائية.",
-    desc_en: "Fully enclosed business class sky suite featuring 24-inch 4K screen, authentic Kaiseki dining, and priority boarding.",
-    provider_ar: "Google Flights / Skyscanner رادار مسارات طوكيو",
-    provider_en: "Google Flights / Skyscanner Tokyo Flight Radar",
-    directLink: "https://www.google.com/travel/flights?q=flights%20from%20DXB%20to%20HND"
+    desc_ar: "جناح طيران فاخر مغلق بالكامل، سرير مريح مع خدمة إنترنت فائقة السرعة، وقائمة طعام فاخرة وضيافة يابانية أصيلة طوال الرحلة.",
+    desc_en: "Fully enclosed private business sky suite with lie-flat bed, high-speed Wi-Fi, Kaiseki dining, and unmatched Japanese hospitality.",
+    provider_ar: "Emirates / Google Flights Direct Aviation Hub",
+    provider_en: "Emirates / Google Flights Direct Aviation Hub",
+    directLink: "https://www.google.com/travel/flights?q=flights%20from%20DXB%20to%20HND%20business%20class&curr=SAR"
   },
   redsea: {
-    title_ar: "فيلا الأورب الكروية الفضية العائمة بمياه البحر الأحمر (جزيرة شيبارة)",
-    title_en: "Sheybarah Island Futuristic Overwater Orb Villa",
-    location_ar: "وجهة البحر الأحمر، المملكة العربية السعودية",
-    location_en: "The Red Sea, Saudi Arabia",
+    title_ar: "منتجع سانت ريجيس البحر الأحمر (فيلا مائية عائمة بمسبح خاص فوق المرجان)",
+    title_en: "The St. Regis Red Sea Resort (Overwater Coral Plunge Pool Villa)",
+    location_ar: "جزيرة أمهات، وجهة البحر الأحمر، المملكة العربية السعودية",
+    location_en: "Ummahat Island, The Red Sea, Saudi Arabia",
     image: "assets/redsea_resort.jpg",
-    originalPriceSAR: 9500,
-    dealPriceSAR: 3600,
+    originalPriceSAR: 10500,
+    dealPriceSAR: 3750,
     priceUnitAr: " / ليلة",
     priceUnitEn: " / night",
-    discountPct: 62,
-    originalPrice_ar: "9,500 ريال",
-    originalPrice_en: "9,500 SAR",
-    dealPrice_ar: "3,600 ريال / ليلة",
-    dealPrice_en: "3,600 SAR / night",
-    savings_ar: "وفر 5,900 ريال (62%)",
-    savings_en: "Save 5,900 SAR (62%)",
-    statusBadge_ar: "⚠️ تسعير افتتاحي استثنائي غير معلن",
-    statusBadge_en: "⚠️ Unannounced Grand Opening Error Rate",
-    dates_ar: "متاح للحجز المسبق خلال شهري نوفمبر وديسمبر 2026",
-    dates_en: "Advance booking valid Nov - Dec 2026",
-    glitchReason_ar: "سبب الخصم: خطأ في جدول التسعير الافتتاحي للفلل الفضية العائمة بنظام الحجز المركزي مكّن من حجزها بسعر فيلات الشاطئ القياسية.",
-    glitchReason_en: "Discount Reason: Opening rate matrix disparity mapped overwater mirror orbs to terrestrial base villas in central reservation system.",
+    discountPct: 64,
+    originalPrice_ar: "10,500 ريال",
+    originalPrice_en: "10,500 SAR",
+    dealPrice_ar: "3,750 ريال / ليلة",
+    dealPrice_en: "3,750 SAR / night",
+    savings_ar: "وفر 6,750 ريال (64%)",
+    savings_en: "Save 6,750 SAR (64%)",
+    statusBadge_ar: "⚠️ خطأ تسعير الفلل العائمة المركزي (Marriott CRS Glitch)",
+    statusBadge_en: "⚠️ Marriott Central CRS Glitch",
+    dates_ar: "متاح للحجز لشهور نوفمبر وديسمبر 2026 ومطلع 2027",
+    dates_en: "Advance dates valid Nov - Dec 2026 & early 2027",
+    glitchReason_ar: "سبب الخصم: خلل في جدول توزيع الغرف بنظام ماريوت المركزي (Marriott Central Reservation) مكّن من حجز الفلل المائية العائمة فوق الشعاب المرجانية بسعر غرف المحمية الشاطئية الأولية.",
+    glitchReason_en: "Discount Reason: Marriott central CRS room inventory matrix error mapped premium overwater coral villas to base terrestrial sanctuary rates.",
     bookingAdvice_ar: [
-      "تشمل الانتقالات باليخت الفاخر أو الطائرة المائية من مطار البحر الأحمر الدولي (RSI).",
-      "تجربة غوص بيئية خاصة برفقة مرشد بحري معتمد.",
-      "إلغاء واسترداد كامل حتى 14 يوماً قبل موعد الحجز."
+      "يشمل الانتقالات المجانية باليخت الفاخر الخاص أو الطائرة المائية من مطار البحر الأحمر الدولي (RSI).",
+      "خدمة المساعد الشخصي (St. Regis Butler) على مدار الساعة طوال فترة الإقامة.",
+      "رحلة غوص استكشافية خاصة برفقة عالم بحار معتمد، وإلغاء مجاني حتى 14 يوماً قبل السفر."
     ],
     bookingAdvice_en: [
-      "Includes luxury yacht or seaplane transfers from Red Sea Int. Airport (RSI).",
-      "Private eco-diving experience with certified marine naturalist included.",
-      "100% refundable cancellation up to 14 days before check-in date."
+      "Includes complimentary return luxury yacht or seaplane transfers from Red Sea Int. Airport (RSI).",
+      "Signature 24/7 St. Regis Butler service throughout the entire stay.",
+      "Guided private coral reef snorkeling tour and full cancellation refund up to 14 days before arrival."
     ],
     specs_ar: {
       duration: "ليلتين",
-      level: "أورب عائم فضي VIP",
-      seats: "جزيرة شيبارة"
+      level: "فيلا مائية عائمة فاخرة",
+      seats: "جزيرة أمهات العذراء"
     },
     specs_en: {
       duration: "2 Nights",
-      level: "Futuristic Orb Villa",
-      seats: "Sheybarah Island"
+      level: "Overwater Coral Villa",
+      seats: "Ummahat Island"
     },
-    desc_ar: "تحفة معمارية مستقبلية عاكسة تعوم فوق الشعب المرجانية الخلابة، طاقة شمسية 100%، وخصوصية مطلقة مع شرفة بحرية خاصة.",
-    desc_en: "Futuristic stainless steel reflective orb floating over pristine coral reefs on Sheybarah Island, powered by 100% renewable energy.",
-    provider_ar: "Booking.com منتجعات البحر الأحمر المعتمدة",
-    provider_en: "Booking.com Red Sea Ultra Luxury",
-    directLink: "https://www.booking.com/searchresults.html?ss=The+St+Regis+Red+Sea+Resort"
+    desc_ar: "تحفة معمارية عائمة بتصميم بيولوجي فريد يعكس حركة المياه فوق شعاب البحر الأحمر العذراء، مع مسبح خاص وتراس تشميس فسيح وخادم شخصي.",
+    desc_en: "Avant-garde overwater masterpiece floating over pristine coral reefs on Ummahat Island, with private plunge pool, expansive sun deck, and butler.",
+    provider_ar: "The St. Regis / Marriott Bonvoy / Booking.com",
+    provider_en: "The St. Regis / Marriott Bonvoy / Booking.com",
+    directLink: "https://www.booking.com/hotel/sa/the-st-regis-red-sea-resort.html?aid=8092100&label=radar_redsea_stregis_live"
   }
 };
 
 // 3. Ticker Items (Bilingual)
 const tickerItemsData = {
   ar: [
-    "⚡ <strong>قبل 6 دقائق:</strong> خطأ تسعير منتجع المالديف بخصم 62%",
-    "✈️ <strong>قبل 14 دقيقة:</strong> تذاكر درجة أولى لباريس بـ 2,400 ريال فقط",
-    "🏰 <strong>قبل 29 دقيقة:</strong> فندق 5 نجوم في سويسرا بـ 680 ريال",
-    "🏝️ <strong>قبل 45 دقيقة:</strong> فيلا شاطئية بالبحر الأحمر بخصم 55%",
-    "⚡ <strong>قبل ساعة:</strong> منتجع صحراوي في العلا بـ 990 ريال بدلاً من 3,200 ريال"
+    "⚡ <strong>قبل دقيقتين:</strong> خطأ تسعيري مباشر: فيلا مائية بمنتجع سانت ريجيس البحر الأحمر بخصم 64%",
+    "✈️ <strong>قبل 9 دقائق:</strong> تذاكر درجة أولى ملكية لندن (RUH ⇄ LHR) بـ 4,200 ريال بدلاً من 14,800 ريال",
+    "🏰 <strong>قبل 18 دقيقة:</strong> منتجع بانيان تري العلا (فيلا بمسبح خاص) بـ 1,480 ريال / ليلة (وفر 70%)",
+    "🏝️ <strong>قبل 31 دقيقة:</strong> فيلا عائمة فوق الماء بمنتجع والدورف أستوريا المالديف بخصم 63%",
+    "👑 <strong>قبل 44 دقيقة:</strong> أجنحة أتلانتس ذا رويال نخلة جميرا بـ 3,450 ريال فقط شاملة الرويال كلوب"
   ],
   en: [
-    "⚡ <strong>6 mins ago:</strong> Maldives Overwater Villa pricing error with 62% off",
-    "✈️ <strong>14 mins ago:</strong> First Class Suite to Paris for only 2,400 SAR",
-    "🏰 <strong>29 mins ago:</strong> 5-Star Swiss Alpine Hotel for 680 SAR / night",
-    "🏝️ <strong>45 mins ago:</strong> Red Sea Beachfront Villa discounted by 55%",
-    "⚡ <strong>1 hr ago:</strong> AlUla desert pool resort at 990 SAR instead of 3,200 SAR"
+    "⚡ <strong>2 mins ago:</strong> Live Fare Glitch: The St. Regis Red Sea Overwater Villa at 64% off",
+    "✈️ <strong>9 mins ago:</strong> Royal First Class Suite London (RUH ⇄ LHR) for 4,200 SAR instead of 14,800 SAR",
+    "🏰 <strong>18 mins ago:</strong> Banyan Tree AlUla Private Pool Villa for 1,480 SAR / night (Save 70%)",
+    "🏝️ <strong>31 mins ago:</strong> Waldorf Astoria Maldives Overwater Villa with 63% leaked partner rate",
+    "👑 <strong>44 mins ago:</strong> Atlantis The Royal Palm Jumeirah Suite for 3,450 SAR with VIP Royal Club access"
   ]
 };
 
@@ -3323,7 +3328,7 @@ function renderDeals() {
     },
     {
       key: 'maldives',
-      category: 'hotels europe',
+      category: 'glitch hotels',
       badgeClass: 'badge-secret',
       badge: isAr ? dealsData.maldives.statusBadge_ar : dealsData.maldives.statusBadge_en,
       hours: 11,
@@ -3369,7 +3374,7 @@ function renderDeals() {
     },
     {
       key: 'switzerland',
-      category: 'hotels europe',
+      category: 'glitch hotels europe',
       badgeClass: 'badge-secret',
       badge: isAr ? dealsData.switzerland.statusBadge_ar : dealsData.switzerland.statusBadge_en,
       hours: 5,
@@ -3415,7 +3420,7 @@ function renderDeals() {
     },
     {
       key: 'bali',
-      category: 'hotels europe',
+      category: 'glitch hotels',
       badgeClass: 'badge-secret',
       badge: isAr ? dealsData.bali.statusBadge_ar : dealsData.bali.statusBadge_en,
       hours: 8,
@@ -3438,7 +3443,7 @@ function renderDeals() {
     },
     {
       key: 'dubai',
-      category: 'hotels gulf',
+      category: 'glitch hotels gulf',
       badgeClass: 'badge-secret',
       badge: isAr ? dealsData.dubai.statusBadge_ar : dealsData.dubai.statusBadge_en,
       hours: 6,
@@ -3461,7 +3466,7 @@ function renderDeals() {
     },
     {
       key: 'tokyo_flight',
-      category: 'flights glitch europe',
+      category: 'flights glitch',
       badgeClass: 'badge-glitch',
       badge: isAr ? dealsData.tokyo_flight.statusBadge_ar : dealsData.tokyo_flight.statusBadge_en,
       hours: 2,
