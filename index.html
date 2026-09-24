@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>رادار السفر والسياحة | صفقات الفنادق والرحلات السرية وأخطاء الأسعار</title>
+  <meta name="description" content="نادي تنبيهات الصفقات السرية وأخطاء التسعير للسفر والسياحة والفنادق وتذاكر الطيران. نوفر عليك حتى 70% وتصلك التنبيهات على الواتساب فور رصدها." />
+  <meta name="keywords" content="سياحة, سفر, ضيافة, صفقات فنادق, أخطاء تسعير, طيران مخفض, شاليهات, منتجعات العلا, عروض فاخرة, رادار السفر والسياحة, radar travel" />
+  
+  <!-- Mobile & PWA Optimization -->
+  <meta name="theme-color" content="#060b16" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="رادار السفر" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/hero_alula.jpg" />
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="رادار السفر والسياحة | صفقات الفنادق والرحلات السرية وأخطاء الأسعار" />
+  <meta property="og:description" content="تنبيهات فورية على الواتساب بأقوى صفقات الفنادق والرحلات الفاخرة بخصومات تصل إلى 70%." />
+  <meta property="og:image" content="assets/hero_alula.jpg" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon & Styles -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css?v=3.1" />
+</head>
+<body>
+
+  <!-- ================= Navigation Bar ================= -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand-logo">
+        <div class="radar-pulse-icon">
+          ✈️
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n-html="brandName">رادار <span>السفر والسياحة</span></span>
+          <span class="brand-sub" data-i18n="brandSub">راصد صفقات الفنادق والطيران</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#live-deals" data-i18n="navDeals">الصفقات النشطة</a>
+        <a href="#how-it-works" data-i18n="navHow">كيف يعمل؟</a>
+        <a href="#savings-calc" data-i18n="navCalc">حاسبة التوفير</a>
+        <a href="#pricing" data-i18n="navPricing">باقات العضوية</a>
+        <a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
+      </nav>
+
+            <div class="nav-actions">
+        <!-- Language Switcher Button (Single) -->
+                <!-- Destination Search Button -->
+        <button class="btn-search-nav" onclick="openSearchModal()" aria-label="Search Destinations">
+          <span>🔍</span>
+          <span data-i18n="navSearchBtn">الوجهات</span>
+        </button>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Dark / Light Theme" title="تبديل المظهر الفاتح والداكن">
+          <span id="theme-btn-icon">☀️</span>
+        </button>
+        <button class="currency-switch-btn" id="currency-switch-btn" onclick="openCurrencyModal()" aria-label="Select Currency" title="اختر عملة العرض">
+          <span class="curr-flag" id="curr-btn-flag">🇸🇦</span>
+          <span class="curr-code" id="curr-btn-code">SAR</span>
+        </button>
+        <button class="lang-switch-btn" id="lang-switch-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+          <span class="lang-flag" id="lang-btn-flag">🇬🇧</span>
+          <span class="lang-text" id="lang-btn-text">English</span>
+        </button>
+
+        <button class="member-status-btn" id="member-status-btn" onclick="toggleOrOpenMemberModal()" title="حالة اشتراك المتصفح">
+          <span id="member-status-icon">🔒</span>
+          <span id="member-status-text" data-i18n="memberStatusLocked">دخول المشتركين</span>
+        </button>
+
+        <div class="live-clock-pill" id="live-clock-pill" title="التوقيت الحي لرادار السفر">
+          <span class="clock-pulse-dot"></span>
+          <span class="clock-date" id="live-date">الأحد، 20 سبتمبر 2026</span>
+          <span class="clock-sep">•</span>
+          <span class="clock-time" id="live-time">09:00:00 م</span>
+        </div>
+
+        <div class="live-status-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="navStatus">12 صفقة مرصودة اليوم</span>
+        </div>
+        <button class="btn-vip-nav" id="open-vip-btn" onclick="openVipModal()" data-i18n="navVipBtn">
+          انضم لنادي VIP 👑
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Hero Section ================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-grid">
+      
+      <!-- Content Column -->
+      <div class="hero-text-col">
+        <div class="hero-badge-tag">
+          <span data-i18n="heroBadge">⚡ صفقات حصرية وأخطاء تسعير نادرة</span>
+          <span class="badge-time-sep">•</span>
+          <span class="hero-live-clock" id="hero-live-clock">⏱️ جاري المزامنة...</span>
+        </div>
+        
+        <h1 class="hero-title" data-i18n-html="heroTitle">
+          نصيد لك أخطاء الأسعار والصفقات الفاخرة.. <br />
+          <span class="highlight">ونرسلها لجوالك فوراً!</span>
+        </h1>
+        
+        <p class="hero-desc" data-i18n="heroDesc">
+          وفّر حتى 70% على إقامات الفنادق والمنتجعات الـ 5 نجوم وتذاكر الطيران، بدون وسيط وبكل سلاسة وسهولة. نوفر لك الرابط المباشر لتحجز وتوفّر آلاف الريالات.
+        </p>
+
+        <div class="hero-join-card">
+          <form id="hero-quick-form" onsubmit="handleQuickJoin(event)">
+            <div class="join-form-row">
+              <input 
+                type="tel" 
+                class="join-input" 
+                id="hero-phone" 
+                placeholder="أدخل رقم جوالك لتصلك التنبيهات (05xxxxxxx)" 
+                data-i18n-placeholder="heroPhonePlaceholder"
+                required 
+              />
+              <button type="submit" class="btn-join-hero">
+                <span data-i18n="heroJoinBtn">فعّل تنبيهاتي</span>
+                <span class="arrow-icon">←</span>
+              </button>
+            </div>
+            <div class="form-footnote">
+              <span data-i18n="heroFootnotePrivacy">🔒 خصوصية تامة وبدون إعلانات مزعجة</span>
+              <span data-i18n="heroFootnoteFree">⚡ تنبيهات مجانية عبر الواتساب</span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Real-time WhatsApp Alert Simulator -->
+      <div class="phone-mockup-wrapper">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          
+          <div class="wa-header">
+            <div class="wa-avatar">⚡</div>
+            <div class="wa-info">
+              <h4 data-i18n="waTitle">رادار السفر والسياحة | VIP Alerts</h4>
+              <p data-i18n="waStatus">متصل الآن • تنبيه فوري</p>
+            </div>
+          </div>
+
+          <div class="wa-body">
+            <div class="wa-message-bubble">
+              <span class="wa-bubble-badge" data-i18n="waBadge">⚠️ خطأ تسعيري عاجل (Glitch Fare)</span>
+              <h5 data-i18n="waDealTitle">منتجع فاخر في العلا (فيلا بحوض سباحة خاص)</h5>
+              <p data-i18n="waLocation">📍 العلا، المملكة العربية السعودية</p>
+              <p data-i18n="waDates">📅 التواريخ المتاحة: أكتوبر ونوفمبر</p>
+              <p style="margin: 0.5rem 0;">
+                <span data-i18n="waRegularPriceLabel">السعر المعتاد: </span><span class="wa-price-strike">3,450 SAR</span><br />
+                <span data-i18n="waGlitchedPriceLabel">السعر الصدمة الآن: </span><span class="wa-price-now">1,080 SAR <small data-i18n="waPerNight">/ ليلة</small></span>
+              </p>
+              <p style="font-size: 0.775rem; color: #aebac1;" data-i18n="waReason">
+                💡 سبب الخصم: خطأ تسعير بالعملة في منصة الحجز الدولية، ينتهي خلال ساعات بمجرد تعديله!
+              </p>
+              <a href="#live-deals" class="wa-btn-link" onclick="openDealModal('alula')" data-i18n="waBtn">
+                احجز الصفقة الآن قبل الإلغاء ⚡
+              </a>
+              <span class="wa-time" data-i18n="waTime">منذ 8 دقائق • تم التحقق ✓✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= Live Radar Ticker ================= -->
+  <div class="ticker-container">
+    <div class="ticker-label">
+      <span class="pulse-dot"></span>
+      <span data-i18n="tickerLabel">رادار حي</span>
+    </div>
+    <div class="ticker-content" id="ticker-content">
+      <!-- Injected dynamically via app.js renderTicker() -->
+    </div>
+  </div>
+
+  <!-- ================= Live Deals Section ================= -->
+  <section class="deals-section" id="live-deals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="dealsTag">رصد حصري ومحدث</span>
+        <h2 class="section-title" data-i18n="dealsTitle">الصفقات والفرص النشطة الآن ⚡</h2>
+        <p class="section-subtitle" data-i18n="dealsSubtitle">
+          هذه الصفقات تم رصدها آلياً عبر خوارزميات الذكاء الاصطناعي. الأسعار قد ترتفع أو تنفد في أي لحظة، احجز مباشرة دون تردد.
+        </p>
+      </div>
+
+      <!-- Instant Live Deals Search (Fly4free-Style) -->
+      <div class="deals-search-wrapper">
+        <span class="deals-search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="deals-live-search" 
+          class="deals-live-search-input" 
+          placeholder="ابحث فوراً في الصفقات (العلا، المالديف، باريس، سويسرا، طيران)..." 
+          data-i18n-placeholder="dealsSearchPlaceholder"
+          oninput="handleDealsLiveSearch(this.value)"
+        />
+        <button id="deals-clear-search" class="deals-clear-search-btn" onclick="clearDealsLiveSearch()" title="مسح">✕</button>
+      </div>
+
+      <!-- Filter Bar with Counts and Region Chips -->
+      <div class="deals-filter-bar" id="deals-filter-bar">
+        <button class="filter-btn active" data-filter="all" onclick="filterDeals('all', this)">
+          <span data-i18n="filterAll">جميع الصفقات</span>
+          <span class="filter-badge-count" id="count-all">9</span>
+        </button>
+        <button class="filter-btn" data-filter="glitch" onclick="filterDeals('glitch', this)">
+          <span data-i18n="filterGlitch">أخطاء تسعير ⚠️</span>
+          <span class="filter-badge-count" id="count-glitch">4</span>
+        </button>
+        <button class="filter-btn" data-filter="hotels" onclick="filterDeals('hotels', this)">
+          <span data-i18n="filterHotels">فنادق ومنتجعات 5★</span>
+          <span class="filter-badge-count" id="count-hotels">6</span>
+        </button>
+        <button class="filter-btn" data-filter="flights" onclick="filterDeals('flights', this)">
+          <span data-i18n="filterFlights">طيران ودرجات أولى ✈️</span>
+          <span class="filter-badge-count" id="count-flights">2</span>
+        </button>
+        <button class="filter-btn" data-filter="gulf" onclick="filterDeals('gulf', this)">
+          <span data-i18n="filterGulf">الخليج والبحر الأحمر 🇸🇦</span>
+          <span class="filter-badge-count" id="count-gulf">3</span>
+        </button>
+        <button class="filter-btn" data-filter="europe" onclick="filterDeals('europe', this)">
+          <span data-i18n="filterEurope">أوروبا والعالم 🌍</span>
+          <span class="filter-badge-count" id="count-europe">4</span>
+        </button>
+      </div>
+
+      <!-- Deals Toolbar: Live Count & Grid/List View Switcher -->
+      <div class="deals-toolbar-row">
+        <div class="deals-count-indicator">
+          <span>⚡</span>
+          <span data-i18n="showingDealsPrefix">المعروض الآن:</span>
+          <span class="deals-count-num" id="deals-visible-count">9</span>
+          <span data-i18n="dealsWord">صفقة نشطة</span>
+        </div>
+
+        <div class="deals-view-switch">
+          <button class="btn-view-mode active" id="btn-view-grid" onclick="toggleDealsView('grid')" title="عرض شبكي">
+            <span>⊞</span>
+            <span data-i18n="viewGrid">شبكي</span>
+          </button>
+          <button class="btn-view-mode" id="btn-view-list" onclick="toggleDealsView('list')" title="عرض سريع مدمج">
+            <span>☰</span>
+            <span data-i18n="viewList">موجز</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Deals Grid (Injected dynamically via app.js renderDeals()) -->
+      <div class="deals-grid" id="deals-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Savings Calculator ================= -->
+  <section class="calculator-section" id="savings-calc">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="calcTag">احسب أرباحك قبل الاشتراك</span>
+        <h2 class="section-title" data-i18n="calcTitle">كم ريال ستوفر في سفراتك القادمة؟ 💰</h2>
+        <p class="section-subtitle" data-i18n="calcSubtitle">
+          حرّك المؤشرات بناءً على عادات سفرك لترى حجم التوفير الحقيقي الذي يحققه أعضاء رادار السفر والسياحة سنوياً.
+        </p>
+      </div>
+
+      <div class="calc-card">
+        <div class="calc-controls">
+          
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span data-i18n="calcTripsLabel">عدد الرحلات أو الإجازات سنوياً:</span>
+              <span class="calc-val-badge" id="trips-val">3 رحلات</span>
+            </div>
+            <input 
+              type="range" 
+              class="slider-range" 
+              id="trips-slider" 
+              min="1" 
+              max="10" 
+              value="3" 
+              oninput="calculateSavings()" 
+            />
+          </div>
+
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span data-i18n="calcBudgetLabel">متوسط ميزانية الإقامة والرحلة الواحدة:</span>
+              <span class="calc-val-badge" id="budget-val">5,000 ريال</span>
+            </div>
+            <input 
+              type="range" 
+              class="slider-range" 
+              id="budget-slider" 
+              min="2000" 
+              max="25000" 
+              step="1000" 
+              value="5000" 
+              oninput="calculateSavings()" 
+            />
+          </div>
+
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span data-i18n="calcPrefLabel">تفضيل الإقامة:</span>
+              <span class="calc-val-badge" id="pref-val" data-i18n="calcPrefValue">فنادق ومنتجعات فاخرة (4-5 نجوم)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="calc-result-box">
+          <div class="calc-result-title" data-i18n="calcResultTitle">إجمالي التوفير السنوي التقديري مع رادار السفر والسياحة</div>
+          <div class="calc-result-amount" id="savings-result">7,500 ريال</div>
+          <div class="calc-result-subtitle" data-i18n="calcResultSub">مقارنة بالحجز بالأسعار الرسمية المعتادة</div>
+          <button class="btn-calc-cta" onclick="openVipModal()" data-i18n="calcCta">
+            اشترك الآن ووفر هذا المبلغ فوراً ⚡
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= How It Works ================= -->
+  <section class="how-it-works-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="howTag">بكل سهولة وبدون أي تعقيد</span>
+        <h2 class="section-title" data-i18n="howTitle">كيف يعمل الموقع بدون أي اتفاقيات مع الفنادق؟</h2>
+        <p class="section-subtitle" data-i18n="howSubtitle">
+          السر في قوة البرمجيات والذكاء الاصطناعي الذي يمسح الأسعار العامة بالمليون ويصطاد اللحظات التي تخطئ فيها الأنظمة.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number" data-i18n="step1Num">1</div>
+          <h3 class="step-title" data-i18n="step1Title">الرصد الآلي الفوري</h3>
+          <p class="step-desc" data-i18n="step1Desc">
+            أنظمتنا تراقب محركات الحجز العالمية والخطوط الجوية 24/7. بمجرد حدوث خطأ تسعير أو خصم سري مؤقت، يرصده الرادار خلال ثوانٍ.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" data-i18n="step2Num">2</div>
+          <h3 class="step-title" data-i18n="step2Title">تنبيه فوري على جوالك</h3>
+          <p class="step-desc" data-i18n="step2Desc">
+            نرسل لك رسالة واتساب عاجلة تتضمن تفاصيل الفندق، السعر قبل وبعد، وشرح لسبب الصفقة مع التواريخ المناسبة.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" data-i18n="step3Num">3</div>
+          <h3 class="step-title" data-i18n="step3Title">حجز مباشر وتوفير فوري</h3>
+          <p class="step-desc" data-i18n="step3Desc">
+            تضغط الرابط وتحجز مباشرة من موقع الحجز العام أو الموقع الرسمي بنفسك. بدون وسطاء، بدون اتصالات، وبدون أي وجع رأس.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Pricing Plans ================= -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="pricingTag">استثمار يرجع لك من أول سفرة</span>
+        <h2 class="section-title" data-i18n="pricingTitle">اختر باقة العضوية المناسبة لك</h2>
+        <p class="section-subtitle" data-i18n="pricingSubtitle">
+          يمكنك البدء مجاناً، أو الانضمام لنادي VIP لتكون أول من يقتنص أخطاء التسعير قبل أن تنتهي وتطير في دقائق.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Free Plan -->
+        <div class="pricing-card">
+          <h3 class="plan-name" data-i18n="freePlanName">عضوية الباحث المجاني</h3>
+          <p class="plan-desc" data-i18n="freePlanDesc">مناسبة لمن يسافر نادراً ويريد متابعة العروض العامة.</p>
+          <div class="plan-price">
+            <span class="amount" data-i18n="freePlanPrice">0</span>
+            <span class="period" data-i18n="freePlanPeriod">ريال / مدى الحياة</span>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check-icon">✓</span> <span data-i18n="freeFeature1">تنبيه أسبوعي واحد بالعروض العامة</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="freeFeature2">تنبيهات متأخرة 4 ساعات عن الأعضاء المميزين</span></li>
+            <li class="disabled">✕ <span data-i18n="freeFeature3">استلام أخطاء التسعير العاجلة (تطير في ساعات)</span></li>
+            <li class="disabled">✕ <span data-i18n="freeFeature4">تنبيهات الواتساب الفورية المباشرة</span></li>
+            <li class="disabled">✕ <span data-i18n="freeFeature5">خدمة البحث المخصص لرحلتك الخاصة</span></li>
+          </ul>
+          <button class="btn-plan btn-plan-free" onclick="openJoinModal('free')" data-i18n="freeBtn">
+            سجّل مجاناً الآن
+          </button>
+        </div>
+
+        <!-- VIP Featured Plan -->
+        <div class="pricing-card featured">
+          <div class="plan-badge-top" data-i18n="vipBadge">👑 الأكثر قيمة وتوفيراً</div>
+          <h3 class="plan-name" data-i18n="vipPlanName">عضوية رادار السفر والسياحة VIP</h3>
+          <p class="plan-desc" data-i18n="vipPlanDesc">لعشاق السفر والرفاهية الذين يريدون توفير آلاف الريالات بكل حجز.</p>
+          <div class="pricing-tiers-wrapper">
+            <div class="pricing-tier-card primary-annual">
+              <div class="tier-badge-row">
+                <span class="tier-title" data-i18n="tierAnnualTitle">الاشتراك السنوي 👑</span>
+                <span class="tier-discount" data-i18n="tierAnnualDiscount">وفّر 100 ريال (40% خصم)</span>
+              </div>
+              <div class="tier-price-row">
+                <span class="price-before" data-i18n="tierAnnualBefore">249 ريال</span>
+                <span class="price-after">149</span>
+                <span class="price-unit" data-i18n="tierAnnualUnit">ريال / سنوياً</span>
+              </div>
+            </div>
+
+            <div class="pricing-tier-card secondary-monthly">
+              <div class="tier-badge-row">
+                <span class="tier-title" data-i18n="tierMonthlyTitle">الاشتراك الشهري ⚡</span>
+                <span class="tier-discount" data-i18n="tierMonthlyDiscount">وفّر 10 ريال (30% خصم)</span>
+              </div>
+              <div class="tier-price-row">
+                <span class="price-before" data-i18n="tierMonthlyBefore">34 ريال</span>
+                <span class="price-after">24</span>
+                <span class="price-unit" data-i18n="tierMonthlyUnit">ريال / شهرياً</span>
+              </div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check-icon">✓</span> <span data-i18n="vipFeature1">تنبيهات فورية عبر الواتساب وتيليجرام بلحظة رصد الصفقة</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="vipFeature2">وصول فوري لجميع أخطاء التسعير (Glitch Fares) النادرة</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="vipFeature3">صفقات أجنحة الدرجة الأولى ودرجة الأعمال بأسعار السياحية</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="vipFeature4">إرشادات وحيل الحجز المؤكد لضمان عدم إلغاء الفندق</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="vipFeature5">ضمان استرجاع 100% إن لم توفر على الأقل 500 ريال بأول سفرة</span></li>
+          </ul>
+          <button class="btn-plan btn-plan-vip" onclick="openVipModal()" data-i18n="vipBtn">
+            اشترك في باقة VIP بـ 149 ريال سنوياً ⚡
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Viral Referral & Ambassador Card -->
+      <div class="viral-referral-card" id="viral-referral-card">
+        <div class="viral-card-header">
+          <div>
+            <div class="viral-badge">🚀 <span data-i18n="viralBadge">مكافأة سفراء السفر</span></div>
+            <h4 class="viral-title" data-i18n="viralCardTitle">برنامج سفراء رادار السفر 🚀</h4>
+            <p class="viral-subtitle" data-i18n="viralCardSubtitle">ادعُ 3 من أصدقائك للحصول على شهر مجاني في نادي VIP!</p>
+          </div>
+          <div class="viral-reward-tag" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.5rem 1rem; border-radius: 12px; color: #34d399; font-weight: 700; font-size: 0.88rem;">
+            🎁 <span data-i18n="viralReward">شهر VIP مجاني</span>
+          </div>
+        </div>
+
+        <div class="viral-code-box">
+          <div>
+            <span style="font-size: 0.8rem; color: var(--text-dim); display: block; margin-bottom: 0.2rem;" data-i18n="viralCodeLabel">كود ورابط الإحالة الخاص بك:</span>
+            <span class="viral-code-val" id="web-user-ref-code">RADAR-78421</span>
+          </div>
+          <button class="btn-viral-copy" onclick="copyReferralLink()">
+            📋 <span data-i18n="viralCopyBtn">نسخ الرابط</span>
+          </button>
+        </div>
+
+        <div class="viral-progress-section">
+          <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span id="web-ref-progress-text" style="color: var(--gold-light); font-weight: 600;">المكتمل: 0 من 3 دعوات (متبقي 3)</span>
+            <span id="web-ref-progress-pct" style="color: var(--text-dim); font-family: monospace;">0%</span>
+          </div>
+          <div class="viral-progress-bar-bg">
+            <div class="viral-progress-bar-fill" id="web-ref-progress-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="viral-actions-row">
+          <button class="btn-viral-wa" onclick="shareReferralWhatsApp()">
+            <span>💬</span>
+            <span data-i18n="viralShareBtn">مشاركة فورية عبر الواتساب مع أصدقائك 📲</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FAQ Section ================= -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faqTag">كل ما تحتاج معرفته</span>
+        <h2 class="section-title" data-i18n="faqTitle">الأسئلة الشائعة</h2>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq1Q">ما هو خطأ التسعير (Glitch Fare / Rate) وكيف يحدث؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" data-i18n="faq1A">
+            يحدث خطأ التسعير عندما يُدخل موظف التسعير في الفندق أو شركة الطيران أو منصات الحجز سعراً غير صحيح (مثلاً كتابة 100$ بدلاً من 1000$، أو خلل في احتساب أسعار صرف العملات الدولية). هذه الأخطاء تدوم عادة بين ساعتين إلى 24 ساعة فقط قبل أن يتم تصحيحها، ومن يحجز خلالها يفوز بالسعر المخفض قانونياً ومؤكداً.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq2Q">هل الفندق أو شركة الطيران تقبل الحجز إذا كان خطأ تسعير؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" data-i18n="faq2A">
+            في أكثر من 92% من الحالات، تلتزم الفنادق وشركات الحجز بالحجز وتمنحه للعميل حماية لسمعتها، أو لأن الحجز تم تأكيده وسحبه من البطاقة الائتمانية وصدر رقم التذكرة. وفي الحالات النادرة التي يُلغى فيها الحجز، يسترد العميل مبلغه كاملاً بدون أي غرامة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq3Q">هل تتفقون مع الفنادق أو تأخذون منهم عمولة؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" data-i18n="faq3A">
+            أبداً! نحن لا نتفق ولا نتفاوض مع أي فندق، ولذلك فنحن مستقلون تماماً ونبحث فقط عن مصلحتك وتوفير أموالك. مهمتنا هي رصد الأسعار العامة بالتقنية، وأنت من يقوم بالحجز مباشرة عبر المواقع الرسمية برابط مباشر وسريع.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq4Q">كيف أستلم التنبيهات؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" data-i18n="faq4A">
+            بمجرد اشتراكك في باقة VIP، يتم ربط رقمك فوراً ببوت التنبيهات الفوري على تطبيق الواتساب أو تيليجرام لتصلك رسالة تحتوي على اسم الفندق، السعر الصدمة، والرابط المباشر بضغطة زر.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="radar-pulse-icon">✈️</div>
+            <div class="brand-text">
+              <span class="brand-name" data-i18n-html="brandName">رادار <span>السفر والسياحة</span></span>
+              <span class="brand-sub" data-i18n="brandSub">راصد صفقات الفنادق والطيران</span>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">
+            المنصة الشاملة الأولى عربياً لرصد أخطاء التسعير والصفقات السرية للسياحة والضيافة وتذاكر الطيران، بدون وسطاء وبكل سهولة وموثوقية.
+          </p>
+          <div class="footer-social-strip">
+            <!-- WhatsApp Official Logo -->
+            <a href="https://wa.me/966500000000?text=RadarTravel" target="_blank" rel="noopener" class="social-btn social-wa" title="WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.333 5.494 0 12.05 0c3.181.002 6.168 1.242 8.413 3.488 2.245 2.246 3.483 5.234 3.48 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.99 0-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.65 3.742-.983zm10.875-6.811c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              </svg>
+            </a>
+            <!-- Email Official Logo -->
+            <a href="mailto:support@radar-travel.com" class="social-btn social-mail" title="Email" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footerCol1Title">أقسام المنصة</h5>
+          <ul>
+            <li><a href="#live-deals" data-i18n="navDeals">الصفقات النشطة</a></li>
+            <li><a href="#savings-calc" data-i18n="navCalc">حاسبة التوفير</a></li>
+            <li><a href="#how-it-works" data-i18n="navHow">كيف يعمل رادار السفر؟</a></li>
+            <li><a href="#pricing" data-i18n="navPricing">باقات العضوية</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footerCol2Title">أنواع الصفقات</h5>
+          <ul>
+            <li><a href="#live-deals" data-i18n="filterGlitch">أخطاء تسعير الفنادق والمنتجعات</a></li>
+            <li><a href="#live-deals">AlUla & Red Sea Resorts</a></li>
+            <li><a href="#live-deals">Maldives & Overwater Villas</a></li>
+            <li><a href="#live-deals" data-i18n="filterFlights">تذاكر الطيران ودرجات الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footerCol3Title">تواصل وقانوني</h5>
+          <ul>
+            <li><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a></li>
+            <li><a href="javascript:void(0)" onclick="openTermsModal()" data-i18n="navTerms">شروط الاستخدام</a></li>
+            <li><a href="#" onclick="openVipModal()" data-i18n="navVipBtn">تفعيل عضوية VIP</a></li>
+            <li><a href="mailto:support@radar-travel.com">support@radar-travel.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <p data-i18n="footerCopyright">© 2026 رادار السفر والسياحة. جميع الحقوق محفوظة. المنصة الشاملة لرصد صفقات الفنادق وتذاكر الطيران والسياحة الفاخرة.</p>
+        <button onclick="openAdminHUD()" class="btn-admin-hud-trigger" title="Admin HUD (Ctrl+Shift+A)">
+          🔒 <span data-i18n="adminHudLink">الإدارة و CRM</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- ================= Destination Search Modal ================= -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content modal-search-content">
+      <button class="modal-close-btn" onclick="closeModal('search-modal')">✕</button>
+      <div class="search-modal-header">
+        <span class="section-tag" data-i18n="searchModalTag">استكشف الوجهات السياحية</span>
+        <h3 class="modal-search-title" data-i18n="searchModalTitle">الدول والمدن السياحية 🌍</h3>
+        <p class="modal-search-subtitle" data-i18n="searchModalSubtitle">اختر وجهتك أو ابحث بالاسم لرؤية صفقات الفنادق وأخطاء الأسعار النشطة</p>
+        
+        <div class="search-input-wrapper">
+          <span class="search-field-icon">🔍</span>
+          <input 
+            type="text" 
+            id="destination-search-input" 
+            class="destination-search-input" 
+            placeholder="ابحث عن دولة أو مدينة سياحية (العلا، دبي، باريس، المالديف)..." 
+            data-i18n-placeholder="searchPlaceholder"
+            oninput="filterDestinationsList(this.value)" 
+          />
+        </div>
+        <div class="search-region-tabs" id="search-region-tabs">
+          <button class="region-tab-btn active" onclick="setRegionFilter('all', this)" data-i18n="regAll">كافة الوجهات 🌍</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('trending', this)" data-i18n="regTrending">✨ وجهات صاعدة وحديثة</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('gulf', this)" data-i18n="regGulf">الشرق الأوسط والخليج 🇸🇦</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('europe', this)" data-i18n="regEurope">أوروبا 🇪🇺</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('asia', this)" data-i18n="regAsia">آسيا والمحيط الهادئ 🏝️</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('americas', this)" data-i18n="regAmericas">الأمريكتين 🌎</button>
+          <button class="region-tab-btn" onclick="setRegionFilter('africa', this)" data-i18n="regAfrica">أفريقيا والمحيط الهندي 🦁</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Destination Countries & Cities List -->
+      <div class="destinations-scroll-container" id="destinations-list-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Currency Selector Modal ================= -->
+  <div class="modal-overlay" id="currency-modal">
+    <div class="modal-content modal-search-content">
+      <button class="modal-close-btn" onclick="closeModal('currency-modal')">✕</button>
+      <div class="search-modal-header">
+        <span class="section-tag" data-i18n="currencyModalTag">العملات الدولية</span>
+        <h3 class="modal-search-title" data-i18n="currencyModalTitle">اختر عملة عرض الأسعار 💱</h3>
+        <p class="modal-search-subtitle" data-i18n="currencyModalSubtitle">يتم تحويل وتحديث أسعار الصفقات وحاسبة التوفير وباقات العضوية فورياً بحسب عملتك</p>
+        
+        <div class="search-input-wrapper">
+          <span class="search-field-icon">🔍</span>
+          <input 
+            type="text" 
+            id="currency-search-input" 
+            class="destination-search-input" 
+            placeholder="ابحث باسم الدولة أو كود العملة (SAR, USD, درهم)..." 
+            data-i18n-placeholder="currencySearchPlaceholder"
+            oninput="filterCurrenciesList(this.value)" 
+          />
+        </div>
+      </div>
+      <div class="currency-grid-container" id="currency-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Deal Detail Modal ================= -->
+  <div class="modal-overlay" id="deal-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal('deal-modal')">✕</button>
+      <div id="deal-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Subscriber Gate Modal (Exclusive Members Only) ================= -->
+  <div class="modal-overlay" id="subscriber-gate-modal">
+    <div class="modal-content" style="max-width: 540px; text-align: center;">
+      <button class="modal-close-btn" onclick="closeModal('subscriber-gate-modal')">✕</button>
+      
+      <div style="font-size: 2.8rem; margin-bottom: 0.35rem;">🔒✈️</div>
+      <span class="deal-badge-float badge-glitch" style="position: static; display: inline-block; margin-bottom: 0.75rem;">
+        🔐 حصري للمتصفحين المشتركين
+      </span>
+      
+      <h3 style="font-family: var(--font-heading); font-size: 1.55rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-i18n="subscriberGateTitle">
+        هذه العروض الحقيقية متاحة فقط للمتصفحين المشتركين
+      </h3>
+      
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;" data-i18n="subscriberGateSub">
+        نظراً لمحدودية المقاعد وسرعة انتهاء أخطاء الأسعار (Glitch Fares)، نوفر روابط الحجز المباشرة وتفاصيل الصفقات الحقيقية فقط للمتصفحين المشتركين مجاناً.
+      </p>
+
+      <!-- Target Deal Mini Summary (Populated if opened from a specific deal) -->
+      <div id="gate-deal-preview" style="display: none; background: #E9EDF0; border: 1px solid rgba(59, 130, 196, 0.25); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; text-align: right; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <span style="font-size: 1.5rem;">🎯</span>
+          <div>
+            <div id="gate-deal-title" style="font-weight: 800; font-size: 0.92rem; color: var(--text-primary);">صفقة حقيقية مقفلة</div>
+            <div id="gate-deal-save" style="font-size: 0.8rem; color: var(--link-blue); font-weight: 700;">وفر حتى 65%</div>
+          </div>
+        </div>
+        <span style="background: rgba(239, 68, 68, 0.12); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800;">
+          🔒 مقفلة للزوار
+        </span>
+      </div>
+
+      <!-- Perks list -->
+      <div style="margin-bottom: 1.25rem;">
+        <div class="gate-perk-item">
+          <span class="gate-perk-icon">⚡</span>
+          <div class="gate-perk-text">
+            <h4 data-i18n="gatePerk1Title">روابط الحجز المباشرة الفورية</h4>
+            <p data-i18n="gatePerk1Desc">الوصول المباشر لكود ورابط الحجز الفعلي قبل تعديل أو إلغاء السعر.</p>
+          </div>
+        </div>
+        <div class="gate-perk-item">
+          <span class="gate-perk-icon">⚠️</span>
+          <div class="gate-perk-text">
+            <h4 data-i18n="gatePerk2Title">أخطاء تسعير وفنادق 5 نجوم حصرية</h4>
+            <p data-i18n="gatePerk2Desc">خصومات تصل إلى 70% على الطيران والمنتجعات الفاخرة لا تظهر للعامة.</p>
+          </div>
+        </div>
+        <div class="gate-perk-item">
+          <span class="gate-perk-icon">📱</span>
+          <div class="gate-perk-text">
+            <h4 data-i18n="gatePerk3Title">تنبيهات فورية عبر الواتساب</h4>
+            <p data-i18n="gatePerk3Desc">تصلك الصفقة في نفس ثانية رصدها لتلحق حجز المقعد قبل الآخرين.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fast Subscriber Unlock Form -->
+      <form id="subscriber-gate-form" onsubmit="handleGateSubscribe(event)" style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <input type="text" id="gate-name" class="join-input" placeholder="الاسم الكريم (مثال: محمد سعيد)" style="width: 100%;" required />
+        <input type="tel" id="gate-phone" class="join-input" placeholder="رقم جوالك / الواتساب للتفعيل (05xxxxxxx)" style="width: 100%;" required />
+        
+        <button type="submit" class="btn-join-hero" style="width: 100%; justify-content: center; padding: 0.95rem; font-size: 1.05rem;" data-i18n="gateSubmitBtn">
+          <span>✨ تفعيل اشتراكي وفتح جميع الصفقات فوراً</span>
+          <span class="arrow-icon">←</span>
+        </button>
+      </form>
+
+      <!-- Already subscribed quick bypass/login -->
+      <div style="margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-dim); display: flex; flex-direction: column; gap: 0.4rem;">
+        <div>
+          <span data-i18n="gateAlreadyText">هل أنت مشترك بالفعل؟ </span>
+          <button type="button" onclick="activateDirectSubscriber()" style="background: none; border: none; color: var(--link-blue); font-weight: 700; text-decoration: underline; cursor: pointer;" data-i18n="gateAlreadyBtn">
+            اضغط هنا لتأكيد اشتراكك وفتح الصفقات بنقرة واحدة
+          </button>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-dim);">
+          🔒 لا نرسل أي رسائل مزعجة إطلاقاً • يمكنك إلغاء الاشتراك في أي وقت
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= VIP Subscription Modal ================= -->
+  <div class="modal-overlay" id="vip-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal('vip-modal')">✕</button>
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">👑</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;" data-i18n="vipModalTitle">انضم لعضوية رادار السفر والسياحة VIP</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.75rem;" data-i18n="vipModalSub">
+          لا تفوت صفقات أخطاء الأسعار التي توفر عليك آلاف الريالات. تنبيهات واتساب في نفس ثانية الرصد!
+        </p>
+
+        <form id="vip-register-form" onsubmit="handleVipSubscribe(event)">
+          <div style="margin-bottom: 1rem; text-align: inherit;">
+            <label style="font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.4rem;" data-i18n="vipLabelName">الاسم الكامل:</label>
+            <input type="text" class="join-input" style="width: 100%;" placeholder="سعيد محمد / Saeed" required />
+          </div>
+
+          <div style="margin-bottom: 1rem; text-align: inherit;">
+            <label style="font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.4rem;" data-i18n="vipLabelPhone">رقم الواتساب للتنبيهات:</label>
+            <input type="tel" class="join-input" style="width: 100%;" placeholder="0501234567" required />
+          </div>
+
+          <div style="margin-bottom: 1.5rem; text-align: inherit;">
+            <label style="font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.4rem;" data-i18n="vipLabelPlan">نوع الاشتراك:</label>
+            <select class="join-input" style="width: 100%; cursor: pointer;">
+              <option value="annual" selected data-i18n="vipOptionAnnual">الاشتراك السنوي: 149 ريال / سنة (بدلاً من 249 ريال) 👑 الأكثر توفيراً</option>
+              <option value="monthly" data-i18n="vipOptionMonthly">الاشتراك الشهري: 24 ريال / شهرياً (بدلاً من 34 ريال) ⚡</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-plan btn-plan-vip" style="font-size: 1.1rem; padding: 1rem;" data-i18n="vipSubmitBtn">
+            تفعيل الاشتراك والبدء الفوري ⚡
+          </button>
+        </form>
+
+        <div style="margin-top: 1.25rem; font-size: 0.8rem; color: var(--text-dim);" data-i18n="vipGuarantee">
+          🛡️ ضمان استرجاع 100% لمدة 30 يوماً إن لم توفر أضعاف قيمة الاشتراك.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ================= Terms of Use Modal ================= -->
+  <div class="modal-overlay" id="terms-modal">
+    <div class="modal-content modal-terms-content">
+      <button class="modal-close-btn" onclick="closeTermsModal()">✕</button>
+      <div style="font-size: 3rem; margin-bottom: 0.5rem; text-align: center;">🛡️</div>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center;" data-i18n="termsModalTitle">شروط وأحكام استخدام رادار السفر</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.25rem; text-align: center;" data-i18n="termsModalSub">
+        اتفاقية الاستخدام والضمان لرصد صفقات وأخطاء أسعار الفنادق والطيران
+      </p>
+
+      <div class="terms-scroll-body">
+        <div class="term-block">
+          <div class="term-block-title">
+            <span class="term-block-num">1</span>
+            <span data-i18n="term1Title">طبيعة المنصة وخدمة الرصد الآلي</span>
+          </div>
+          <div class="term-block-text">
+            <span data-i18n="term1Text">رادار السفر منصة تقنية ذكية تقوم بمسح 85 محرك حجز عالمي ووكالة سفر وخطوط طيران لرصد الصفقات وأخطاء التسعير الاستثنائية وتقديمها للمسافر فور حدوثها دون أن تمثل وسيطاً مالياً أو وكالة بيع مباشرة.</span>
+          </div>
+        </div>
+
+        <div class="term-block">
+          <div class="term-block-title">
+            <span class="term-block-num">2</span>
+            <span data-i18n="term2Title">صفقات أخطاء الأسعار (Glitch Fares)</span>
+          </div>
+          <div class="term-block-text">
+            <span data-i18n="term2Text">أخطاء التسعير ناتجة عن خلل تقني مؤقت في أنظمة الفنادق أو شركات الطيران أو فروقات أسعار الصرف. توفر المنصة روابط الحجز المباشرة مع إرشادات وتكتيكات لتفادي الإلغاء وضمان ثبات الحجز.</span>
+          </div>
+        </div>
+
+        <div class="term-block">
+          <div class="term-block-title">
+            <span class="term-block-num">3</span>
+            <span data-i18n="term3Title">اشتراكات النخبة VIP وضمان الـ 100%</span>
+          </div>
+          <div class="term-block-text">
+            <span data-i18n="term3Text">تمنح اشتراكات VIP وصولاً فورياً للصفقات عبر الواتساب والإشعارات اللحظية. نوفر ضمان استرجاع 100% خلال 30 يوماً إن لم يوفر المشترك أضعاف قيمة اشتراكه من أول حجز فندقي أو طيران.</span>
+          </div>
+        </div>
+
+        <div class="term-block">
+          <div class="term-block-title">
+            <span class="term-block-num">4</span>
+            <span data-i18n="term4Title">الحجز المباشر وإخلاء المسؤولية</span>
+          </div>
+          <div class="term-block-text">
+            <span data-i18n="term4Text">تتم كافة عمليات الدفع وتأكيد الحجوزات وإصدار التذاكر على المواقع الرسمية لمزودي الخدمة (الفنادق وشركات الطيران ومحركات الحجز). تخضع الأسعار لتوافر المقاعد وأسبقية الحجز.</span>
+          </div>
+        </div>
+
+        <div class="term-block">
+          <div class="term-block-title">
+            <span class="term-block-num">5</span>
+            <span data-i18n="term5Title">الخصوصية والاستخدام العادل</span>
+          </div>
+          <div class="term-block-text">
+            <span data-i18n="term5Text">بيانات المشتركين وأرقام هواتفهم مشفرة ومحمية بأعلى معايير الأمان ولا تُشارك مع أي طرف ثالث. يحظر إعادة بيع أو استغلال روابط وتنبيهات الرادار تجارياً بدون ترخيص خطي مسبق.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.25rem; text-align: center;">
+        <button class="btn-plan btn-plan-vip" onclick="closeTermsModal()" style="padding: 0.85rem 2rem;" data-i18n="termsAcceptBtn">
+          فهمت وموافق على الشروط ✓
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Secret Admin HUD & CRM Analytics Modal ================= -->
+  <div class="modal-overlay" id="admin-hud-modal">
+    <div class="modal-content modal-admin-hud">
+      <button class="modal-close-btn" onclick="closeAdminHUD()">✕</button>
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding-bottom: 1rem;">
+        <div>
+          <span class="section-tag" style="color: var(--cyan-light); border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">SYSTEM HUD</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 0.35rem;" data-i18n="adminHudTitle">لوحة تحكم رادار السفر (Admin HUD)</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="adminHudSubtitle">إدارة المشتركين وقاعدة بيانات العملاء، الويب هوك، ومؤشرات الانتشار الفيروسي</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-plan-vip" onclick="exportSubscribersCSV()" style="padding: 0.55rem 1.1rem; font-size: 0.85rem; border-radius: 10px; cursor: pointer;">
+            📊 <span data-i18n="adminExportCsv">تصدير CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Metrics Grid -->
+      <div class="admin-kpi-grid">
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-label" data-i18n="adminKpiLeads">إجمالي المشتركين</div>
+          <div class="admin-kpi-num" id="admin-kpi-total">0</div>
+        </div>
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-label" data-i18n="adminKpiVip">مشتركو VIP</div>
+          <div class="admin-kpi-num" id="admin-kpi-vip" style="color: #ffca28;">0</div>
+        </div>
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-label" data-i18n="adminKpiViews">مشاهدات الصفقات</div>
+          <div class="admin-kpi-num" id="admin-kpi-views" style="color: #38bdf8;">0</div>
+        </div>
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-label" data-i18n="adminKpiShares">مشاركات الواتساب</div>
+          <div class="admin-kpi-num" id="admin-kpi-shares" style="color: #25D366;">0</div>
+        </div>
+      </div>
+
+      <!-- Webhook Dispatch Configuration -->
+      <div class="admin-webhook-strip">
+        <span style="font-size: 0.85rem; color: var(--gold-light); font-weight: 600; white-space: nowrap;" data-i18n="adminWebhookLabel">🔗 رابط الويب هوك (Make/Zapier):</span>
+        <input type="url" id="admin-webhook-url" class="admin-webhook-input" placeholder="https://hook.eu1.make.com/..." />
+        <button onclick="saveAdminWebhook()" class="btn-viral-copy" style="min-width: 100px; padding: 0.65rem 0.9rem;" data-i18n="adminSaveWebhook">حفظ الرابط</button>
+        <button onclick="testWebhookDispatch()" class="btn-viral-copy" style="min-width: 100px; padding: 0.65rem 0.9rem; border-color: rgba(56, 189, 248, 0.5); color: #38bdf8;" data-i18n="adminTestWebhook">إرسال تجربة</button>
+      </div>
+
+      <!-- Subscribers CRM Table -->
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th data-i18n="adminColName">الاسم</th>
+              <th data-i18n="adminColPhone">الجوال / الواتساب</th>
+              <th data-i18n="adminColTier">الباقة</th>
+              <th data-i18n="adminColRef">كود الإحالة</th>
+              <th data-i18n="adminColDate">التاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="admin-subscribers-tbody">
+            <!-- Injected via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile App Bottom Navigation Bar (Capacitor & Mobile Web) -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+    <a href="#hero" class="mobile-nav-item active" onclick="setMobileNavActive(this)">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label" data-i18n="mobileHome">الرئيسية</span>
+    </a>
+    <a href="#live-deals" class="mobile-nav-item" onclick="setMobileNavActive(this)">
+      <span class="nav-icon">⚡</span>
+      <span class="nav-label" data-i18n="mobileDeals">الصفقات</span>
+      <span class="nav-badge">6</span>
+    </a>
+    <a href="#savings-calc" class="mobile-nav-item" onclick="setMobileNavActive(this)">
+      <span class="nav-icon">🧮</span>
+      <span class="nav-label" data-i18n="mobileCalc">التوفير</span>
+    </a>
+    <a href="#how-it-works" class="mobile-nav-item" onclick="setMobileNavActive(this)">
+      <span class="nav-icon">💡</span>
+      <span class="nav-label" data-i18n="mobileHow">الآلية</span>
+    </a>
+    <a href="#pricing" class="mobile-nav-item vip-item" onclick="setMobileNavActive(this)">
+      <span class="nav-icon">👑</span>
+      <span class="nav-label" data-i18n="mobileVip">VIP</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="toggleTheme()" title="المظهر">
+      <span class="nav-icon" id="mobile-theme-icon">☀️</span>
+      <span class="nav-label" id="mobile-theme-label" data-i18n="mobileTheme">المظهر</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="toggleLanguage()">
+      <span class="nav-icon">🌐</span>
+      <span class="nav-label" id="mobile-lang-label">EN</span>
+    </a>
+  </nav>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Floating Back-to-Top Button (Fly4free-Style) -->
+  <button id="back-to-top-btn" class="back-to-top-btn" onclick="scrollToTop()" title="الصعود للأعلى" aria-label="Back to Top">
+    ↑
+  </button>
+
+  <!-- Javascript Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
