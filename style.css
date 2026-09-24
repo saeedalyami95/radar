@@ -3615,6 +3615,39 @@ body[data-theme="dark"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+[data-theme="dark"] .live-clock-pill,
+[data-theme="dark"] .lang-switch-btn,
+[data-theme="dark"] .currency-switch-btn,
+[data-theme="dark"] .btn-search-nav,
+[data-theme="dark"] .member-status-btn {
+  background: rgba(15, 26, 52, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-theme="dark"] .live-clock-pill .clock-date {
+  color: #cbd5e1 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .live-clock-pill .clock-sep {
+  color: #fbbf24 !important;
+}
+
+[data-theme="dark"] .live-clock-pill .clock-time {
+  color: #38bdf8 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .lang-switch-btn .lang-text,
+[data-theme="dark"] .currency-switch-btn .curr-code,
+[data-theme="dark"] .btn-search-nav span,
+[data-theme="dark"] .member-status-btn span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
 [data-theme="dark"] .mobile-bottom-nav {
   background: rgba(6, 11, 22, 0.94) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
