@@ -3920,8 +3920,8 @@ function updateSubscriberUI() {
   }
 
   // Re-render deals grid to apply locked/unlocked state
-  if (typeof renderDealsGrid === 'function' && typeof dealsData !== 'undefined') {
-    renderDealsGrid();
+  if (typeof renderDeals === 'function') {
+    renderDeals();
   }
 }
 
@@ -4070,8 +4070,20 @@ function openJoinModal(type) {
   }
 }
 
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
 function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('active');
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
 // Close on backdrop click or ESC
@@ -4671,8 +4683,12 @@ window.closeCurrencyModal = closeCurrencyModal;
 window.filterCurrenciesList = filterCurrenciesList;
 
 function initRadarApp() {
-  if (window.location.pathname.endsWith('en.html') || window.location.search.includes('lang=en')) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const langParam = urlParams.get('lang');
+  if (window.location.pathname.endsWith('en.html') || langParam === 'en') {
     currentLang = 'en';
+  } else if (langParam === 'ar') {
+    currentLang = 'ar';
   }
   setLanguage(currentLang);
   setTheme(currentTheme);
@@ -4684,11 +4700,7 @@ function initRadarApp() {
   logAnalyticsEvent('page_view');
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initRadarApp);
-} else {
-  initRadarApp();
-}
+// App initialization is triggered at the end of the file after all modules and constants are declared.
 
 function openTermsModal() {
   const modal = document.getElementById('terms-modal');
@@ -4942,12 +4954,16 @@ function updateReferralUI() {
 function copyReferralLink() {
   const code = getMyReferralCode();
   const url = `${window.location.origin}${window.location.pathname}?ref=${code}`;
-  navigator.clipboard.writeText(url).then(() => {
-    const isAr = (currentLang === 'ar');
-    showToast(isAr ? 'تم نسخ رابط الإحالة بنجاح 📋' : 'Referral link copied to clipboard 📋', '✓');
-  }).catch(() => {
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    navigator.clipboard.writeText(url).then(() => {
+      const isAr = (currentLang === 'ar');
+      showToast(isAr ? 'تم نسخ رابط الإحالة بنجاح 📋' : 'Referral link copied to clipboard 📋', '✓');
+    }).catch(() => {
+      prompt(currentLang === 'ar' ? 'انسخ رابط الإحالة الخاص بك:' : 'Copy your referral link:', url);
+    });
+  } else {
     prompt(currentLang === 'ar' ? 'انسخ رابط الإحالة الخاص بك:' : 'Copy your referral link:', url);
-  });
+  }
 }
 
 function shareReferralWhatsApp() {
@@ -5111,4 +5127,13 @@ window.clearDealsLiveSearch = clearDealsLiveSearch;
 window.toggleDealsView = toggleDealsView;
 window.scrollToTop = scrollToTop;
 window.filterDeals = filterDeals;
+window.openModal = openModal;
+window.closeModal = closeModal;
+
+// Initialize application (placed at end of script to guarantee all constants and modules are initialized)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRadarApp);
+} else {
+  initRadarApp();
+}
 

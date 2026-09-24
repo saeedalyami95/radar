@@ -62,9 +62,9 @@
           <span class="curr-flag" id="curr-btn-flag">🇸🇦</span>
           <span class="curr-code" id="curr-btn-code">SAR</span>
         </button>
-        <a href="index.html" class="lang-switch-btn" aria-label="Switch to Arabic">
-          <span class="lang-flag">🇸🇦</span>
-          <span class="lang-text">العربية</span>
+        <a href="index.html?lang=ar" class="lang-switch-btn" aria-label="Switch to Arabic" onclick="if(typeof setLanguage==='function')setLanguage('ar');">
+          <span class="lang-flag" id="lang-btn-flag">🇸🇦</span>
+          <span class="lang-text" id="lang-btn-text">العربية</span>
         </a>
 
         <button class="member-status-btn" id="member-status-btn" onclick="toggleOrOpenMemberModal()" title="Member Subscription Status">
@@ -967,7 +967,7 @@
     <a href="#live-deals" class="mobile-nav-item" onclick="setMobileNavActive(this)">
       <span class="nav-icon">⚡</span>
       <span class="nav-label">Deals</span>
-      <span class="nav-badge">6</span>
+      <span class="nav-badge">9</span>
     </a>
     <a href="#savings-calc" class="mobile-nav-item" onclick="setMobileNavActive(this)">
       <span class="nav-icon">🧮</span>
@@ -981,9 +981,13 @@
       <span class="nav-icon">👑</span>
       <span class="nav-label">VIP</span>
     </a>
-    <a href="index.html" class="mobile-nav-item">
-      <span class="nav-icon">🇸🇦</span>
-      <span class="nav-label">عربي</span>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="toggleTheme()" title="Theme">
+      <span class="nav-icon" id="mobile-theme-icon">☀️</span>
+      <span class="nav-label" id="mobile-theme-label">Theme</span>
+    </a>
+    <a href="index.html?lang=ar" class="mobile-nav-item" onclick="if(typeof setLanguage==='function')setLanguage('ar');">
+      <span class="nav-icon">🌐</span>
+      <span class="nav-label" id="mobile-lang-label">عربي</span>
     </a>
   </nav>
 
