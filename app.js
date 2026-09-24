@@ -3,8 +3,49 @@
    Bilingual Support: Arabic (العربية) & English (EN)
    ========================================================================== */
 
+// Safe Storage Wrappers (Resilient across private browsing, iframes, and restricted WebViews)
+const safeStorage = {
+  getItem: function(key) {
+    try {
+      return typeof localStorage !== 'undefined' ? localStorage.getItem(key) : null;
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem: function(key, val) {
+    try {
+      if (typeof localStorage !== 'undefined') localStorage.setItem(key, val);
+    } catch (e) {}
+  },
+  removeItem: function(key) {
+    try {
+      if (typeof localStorage !== 'undefined') localStorage.removeItem(key);
+    } catch (e) {}
+  }
+};
+
+const safeSession = {
+  getItem: function(key) {
+    try {
+      return typeof sessionStorage !== 'undefined' ? sessionStorage.getItem(key) : null;
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem: function(key, val) {
+    try {
+      if (typeof sessionStorage !== 'undefined') sessionStorage.setItem(key, val);
+    } catch (e) {}
+  },
+  removeItem: function(key) {
+    try {
+      if (typeof sessionStorage !== 'undefined') sessionStorage.removeItem(key);
+    } catch (e) {}
+  }
+};
+
 // 1. Current Language State
-let currentLang = localStorage.getItem('radar_lang') || 'ar';
+let currentLang = safeStorage.getItem('radar_lang') || 'ar';
 
 // 1.5 Global Currencies Database (23 Global & Regional Currencies - Synced with CurrencyManager.swift)
 const currenciesData = {
@@ -350,7 +391,7 @@ function detectInitialCurrency() {
   return 'SAR';
 }
 
-let currentCurrencyCode = localStorage.getItem('radar_selected_currency') || detectInitialCurrency();
+let currentCurrencyCode = safeStorage.getItem('radar_selected_currency') || detectInitialCurrency();
 if (!currenciesData[currentCurrencyCode]) {
   currentCurrencyCode = 'SAR';
 }
@@ -3158,7 +3199,7 @@ const translations = {
 function setLanguage(lang) {
   if (lang !== 'ar' && lang !== 'en') lang = 'ar';
   currentLang = lang;
-  localStorage.setItem('radar_lang', lang);
+  safeStorage.setItem('radar_lang', lang);
 
   const isAr = (lang === 'ar');
   const t = translations[lang];
@@ -3487,7 +3528,7 @@ function renderDeals() {
     `;
   }
 
-  const isSubscriber = (localStorage.getItem('radar_is_subscriber') === 'true');
+  const isSubscriber = (safeStorage.getItem('radar_is_subscriber') === 'true');
 
   grid.innerHTML = bannerHtml + activeDeals.map(deal => `
     <div class="deal-card ${!isSubscriber ? 'locked-for-visitor' : ''}" data-category="${deal.category}">
@@ -3615,7 +3656,7 @@ function startCountdowns() {
 // 9. Fly4free-Style Live Search, Categories & View Mode Filtering
 let currentDealCategory = 'all';
 let currentDealSearch = '';
-let currentDealsViewMode = localStorage.getItem('radar_deals_view_mode') || 'grid';
+let currentDealsViewMode = safeStorage.getItem('radar_deals_view_mode') || 'grid';
 
 function applyDealsFilter() {
   const cards = document.querySelectorAll('.deal-card');
@@ -3717,7 +3758,7 @@ function clearDealsLiveSearch() {
 
 function toggleDealsView(mode) {
   currentDealsViewMode = mode;
-  localStorage.setItem('radar_deals_view_mode', mode);
+  safeStorage.setItem('radar_deals_view_mode', mode);
 
   const grid = document.getElementById('deals-grid');
   const btnGrid = document.getElementById('btn-view-grid');
@@ -3780,8 +3821,10 @@ function calculateSavings() {
   const symbol = isAr ? curr.symbolAr : curr.symbolEn;
   const budgetStr = convertedBudget.toLocaleString(isAr ? 'ar-SA' : 'en-US');
 
-  document.getElementById('trips-val').textContent = `${trips} ${tripsUnit}`;
-  document.getElementById('budget-val').textContent = `${budgetStr} ${symbol}`;
+  const tripsEl = document.getElementById('trips-val');
+  if (tripsEl) tripsEl.textContent = `${trips} ${tripsUnit}`;
+  const budgetEl = document.getElementById('budget-val');
+  if (budgetEl) budgetEl.textContent = `${budgetStr} ${symbol}`;
 
   // Assume average 50% discount on 1-2 major stays per trip
   const savingsPercent = 0.50;
@@ -3789,7 +3832,8 @@ function calculateSavings() {
   const convertedSavings = Math.round(estimatedSavingsSAR * curr.rateFromSAR);
   const savingsStr = convertedSavings.toLocaleString(isAr ? 'ar-SA' : 'en-US');
 
-  document.getElementById('savings-result').textContent = `${savingsStr} ${symbol}`;
+  const savingsEl = document.getElementById('savings-result');
+  if (savingsEl) savingsEl.textContent = `${savingsStr} ${symbol}`;
 }
 
 // 11. Modal Handlers
@@ -3797,7 +3841,7 @@ let currentActiveDealKey = null;
 let pendingGateDealKey = null;
 
 function handleDealAccess(dealKey) {
-  const isSub = (localStorage.getItem('radar_is_subscriber') === 'true');
+  const isSub = (safeStorage.getItem('radar_is_subscriber') === 'true');
   if (!isSub) {
     openSubscriberGateModal(dealKey);
     return;
@@ -3843,7 +3887,7 @@ function handleGateSubscribe(event) {
     });
   }
 
-  localStorage.setItem('radar_is_subscriber', 'true');
+  safeStorage.setItem('radar_is_subscriber', 'true');
   updateSubscriberUI();
   closeModal('subscriber-gate-modal');
 
@@ -3863,7 +3907,7 @@ function handleGateSubscribe(event) {
 
 function activateDirectSubscriber() {
   const isAr = (currentLang === 'ar');
-  localStorage.setItem('radar_is_subscriber', 'true');
+  safeStorage.setItem('radar_is_subscriber', 'true');
   updateSubscriberUI();
   closeModal('subscriber-gate-modal');
 
@@ -3882,14 +3926,14 @@ function activateDirectSubscriber() {
 }
 
 function toggleOrOpenMemberModal() {
-  const isSub = (localStorage.getItem('radar_is_subscriber') === 'true');
+  const isSub = (safeStorage.getItem('radar_is_subscriber') === 'true');
   const isAr = (currentLang === 'ar');
   if (isSub) {
     const confirmLogout = confirm(isAr 
       ? "أنت متصفح مشترك حالياً وجميع الصفقات الحقيقية مفتوحة لك ✓\n\nهل ترغب في تسجيل الخروج وتجربة وضع الزائر غير المشترك؟"
       : "You are currently an active member with all real deals unlocked ✓\n\nWould you like to sign out to test visitor mode?");
     if (confirmLogout) {
-      localStorage.removeItem('radar_is_subscriber');
+      safeStorage.removeItem('radar_is_subscriber');
       updateSubscriberUI();
       showToast(isAr ? "تم التبديل لوضع الزائر (الصفقات مقفلة)" : "Switched to visitor mode (Deals locked)", "🔒");
     }
@@ -3899,7 +3943,7 @@ function toggleOrOpenMemberModal() {
 }
 
 function updateSubscriberUI() {
-  const isSub = (localStorage.getItem('radar_is_subscriber') === 'true');
+  const isSub = (safeStorage.getItem('radar_is_subscriber') === 'true');
   const isAr = (currentLang === 'ar');
   const btn = document.getElementById('member-status-btn');
   const icon = document.getElementById('member-status-icon');
@@ -3926,7 +3970,7 @@ function updateSubscriberUI() {
 }
 
 function openDealModal(dealKey) {
-  const isSub = (localStorage.getItem('radar_is_subscriber') === 'true');
+  const isSub = (safeStorage.getItem('radar_is_subscriber') === 'true');
   if (!isSub) {
     openSubscriberGateModal(dealKey);
     return;
@@ -4009,7 +4053,11 @@ function openDealModal(dealKey) {
     logAnalyticsEvent('deal_view', { dealKey });
   }
 
-  document.getElementById('deal-modal').classList.add('active');
+  const dealModal = document.getElementById('deal-modal');
+  if (dealModal) {
+    dealModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 // 11.5 Viral WhatsApp Deal Share
@@ -4056,7 +4104,11 @@ function shareDealWhatsApp(dealKey) {
 }
 
 function openVipModal() {
-  document.getElementById('vip-modal').classList.add('active');
+  const vipModal = document.getElementById('vip-modal');
+  if (vipModal) {
+    vipModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function openJoinModal(type) {
@@ -4088,14 +4140,16 @@ function closeModal(modalId) {
 
 // Close on backdrop click or ESC
 window.addEventListener('click', (e) => {
-  if (e.target.classList.contains('modal-overlay')) {
+  if (e.target.classList && e.target.classList.contains('modal-overlay')) {
     e.target.classList.remove('active');
+    document.body.style.overflow = '';
   }
 });
 
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+    document.body.style.overflow = '';
   }
 });
 
@@ -4138,7 +4192,7 @@ function handleQuickJoin(event) {
     });
   }
 
-  localStorage.setItem('radar_is_subscriber', 'true');
+  safeStorage.setItem('radar_is_subscriber', 'true');
   updateSubscriberUI();
 
   const msg = isAr
@@ -4167,7 +4221,7 @@ function handleVipSubscribe(event) {
     });
   }
 
-  localStorage.setItem('radar_is_subscriber', 'true');
+  safeStorage.setItem('radar_is_subscriber', 'true');
   updateSubscriberUI();
 
   closeModal('vip-modal');
@@ -4420,12 +4474,12 @@ window.clearDestinationFilter = clearDestinationFilter;
 
 
 // 6. Light / Dark Theme Engine
-let currentTheme = localStorage.getItem('radar_theme') || 'dark';
+let currentTheme = safeStorage.getItem('radar_theme') || 'dark';
 
 function setTheme(theme) {
   if (theme !== 'light' && theme !== 'dark') theme = 'dark';
   currentTheme = theme;
-  localStorage.setItem('radar_theme', theme);
+  safeStorage.setItem('radar_theme', theme);
 
   document.documentElement.setAttribute('data-theme', theme);
   if (theme === 'light') {
@@ -4574,7 +4628,7 @@ function updateMembershipPricing() {
 function setCurrency(code) {
   if (!currenciesData[code]) code = 'SAR';
   currentCurrencyCode = code;
-  localStorage.setItem('radar_selected_currency', code);
+  safeStorage.setItem('radar_selected_currency', code);
 
   updateCurrencyButton();
   renderDeals();
@@ -4740,9 +4794,9 @@ const defaultSubscribersSeed = [
 
 function getSubscribers() {
   try {
-    const raw = localStorage.getItem(SUBSCRIBERS_STORAGE_KEY);
+    const raw = safeStorage.getItem(SUBSCRIBERS_STORAGE_KEY);
     if (!raw) {
-      localStorage.setItem(SUBSCRIBERS_STORAGE_KEY, JSON.stringify(defaultSubscribersSeed));
+      safeStorage.setItem(SUBSCRIBERS_STORAGE_KEY, JSON.stringify(defaultSubscribersSeed));
       return defaultSubscribersSeed;
     }
     return JSON.parse(raw);
@@ -4753,7 +4807,7 @@ function getSubscribers() {
 
 function saveSubscribers(subs) {
   try {
-    localStorage.setItem(SUBSCRIBERS_STORAGE_KEY, JSON.stringify(subs));
+    safeStorage.setItem(SUBSCRIBERS_STORAGE_KEY, JSON.stringify(subs));
   } catch (e) {}
 }
 
@@ -4764,7 +4818,7 @@ function generateReferralCode() {
 
 function registerSubscriber({ name, phone, email = '', tier = 'free' }) {
   const subs = getSubscribers();
-  const referredBy = sessionStorage.getItem('radar_referred_by') || null;
+  const referredBy = safeSession.getItem('radar_referred_by') || null;
   const newSub = {
     id: `sub_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
     name: name.trim() || (currentLang === 'ar' ? 'مشترك جديد' : 'New Member'),
@@ -4826,14 +4880,14 @@ function exportSubscribersCSV() {
 }
 
 function getWebhookUrl() {
-  return localStorage.getItem(WEBHOOK_STORAGE_KEY) || '';
+  return safeStorage.getItem(WEBHOOK_STORAGE_KEY) || '';
 }
 
 function saveAdminWebhook() {
   const input = document.getElementById('admin-webhook-url');
   if (!input) return;
   const url = input.value.trim();
-  localStorage.setItem(WEBHOOK_STORAGE_KEY, url);
+  safeStorage.setItem(WEBHOOK_STORAGE_KEY, url);
   showToast(currentLang === 'ar' ? 'تم حفظ رابط الويب هوك بنجاح 🔗' : 'Webhook endpoint saved successfully 🔗', '✓');
 }
 
@@ -4886,10 +4940,10 @@ async function testWebhookDispatch() {
    17. Viral Referral Loop & Milestone Rewards Engine
    ========================================================================== */
 function getMyReferralCode() {
-  let code = localStorage.getItem(REFERRAL_CODE_KEY);
+  let code = safeStorage.getItem(REFERRAL_CODE_KEY);
   if (!code) {
     code = generateReferralCode();
-    localStorage.setItem(REFERRAL_CODE_KEY, code);
+    safeStorage.setItem(REFERRAL_CODE_KEY, code);
   }
   return code;
 }
@@ -4898,18 +4952,18 @@ function initReferralTracking() {
   const params = new URLSearchParams(window.location.search);
   const ref = params.get('ref');
   if (ref && ref.trim()) {
-    sessionStorage.setItem('radar_referred_by', ref.trim());
+    safeSession.setItem('radar_referred_by', ref.trim());
   }
 }
 
 function getReferralCount() {
-  const count = parseInt(localStorage.getItem(REFERRAL_COUNT_KEY) || '0', 10);
+  const count = parseInt(safeStorage.getItem(REFERRAL_COUNT_KEY) || '0', 10);
   return count;
 }
 
 function incrementReferralMilestone() {
   let count = getReferralCount() + 1;
-  localStorage.setItem(REFERRAL_COUNT_KEY, count.toString());
+  safeStorage.setItem(REFERRAL_COUNT_KEY, count.toString());
   updateReferralUI();
 }
 
@@ -4994,7 +5048,7 @@ function shareReferralWhatsApp() {
    ========================================================================== */
 function getAnalyticsKPI() {
   try {
-    const raw = localStorage.getItem(ANALYTICS_STORAGE_KEY);
+    const raw = safeStorage.getItem(ANALYTICS_STORAGE_KEY);
     if (!raw) {
       return { totalViews: 48, whatsappShares: 19, freeLeads: 8, vipLeads: 5 };
     }
@@ -5018,7 +5072,7 @@ function logAnalyticsEvent(eventName, params = {}) {
     kpi.whatsappShares = (kpi.whatsappShares || 0) + 1;
   }
   try {
-    localStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(kpi));
+    safeStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(kpi));
   } catch (e) {}
 }
 
