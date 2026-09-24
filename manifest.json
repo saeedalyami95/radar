@@ -1,0 +1,22 @@
+{
+  "name": "رادار السفر والسياحة | Radar Travel",
+  "short_name": "رادار السفر",
+  "description": "راصد صفقات السفر وأخطاء التسعير الفندقية وتذاكر الطيران الفاخرة",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#060b16",
+  "theme_color": "#060b16",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/hero_alula.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/hero_alula.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
